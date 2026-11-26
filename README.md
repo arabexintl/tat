@@ -55,8 +55,10 @@ perfect score, all five domains, passing Hard, and 70%+ on the mixed exam.
 
 The whole interface is available in English and Arabic (right-to-left), with a
 switch at the top of the home page. The choice is remembered, and visitors whose
-browser is set to Arabic see Arabic first. The questions themselves are bilingual
-and stay the same in both.
+browser is set to Arabic see Arabic first. Question instructions, explanations
+and answer notes follow the chosen language; the English and Arabic texts being
+tested stay exactly as written. Hand-written questions carry their Arabic wording
+in `question_ar`, `explanation_ar` and, where needed, `options_ar`.
 
 Every answer gets instant feedback with the correct answer and a short
 explanation. At the end, candidates get a result card image (with their name, if
