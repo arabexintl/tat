@@ -61,7 +61,9 @@ tested stay exactly as written. Hand-written questions carry their Arabic wordin
 in `question_ar`, `explanation_ar` and, where needed, `options_ar`.
 
 Every answer gets instant feedback with the correct answer and a short
-explanation. At the end, candidates get a result card image (with their name, if
+explanation. After an answer the test moves on by itself — 3 seconds after a right
+answer, 5 after a wrong one — with a Pause button and an on/off switch on the setup
+screen. At the end, candidates get a result card image (with their name, if
 they want) to save or share. Keyboard shortcuts: `1`–`4` or `A`–`D` to answer, `Enter` for the next question.
 
 ## Files
