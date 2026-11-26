@@ -12,14 +12,14 @@ translation judgement across five domains:
 
 | Domain | Questions |
 |---|---|
-| Legal / Court | 840 |
-| Civil & Official Documents | 494 |
-| Medical | 899 |
-| Education / Academic | 616 |
-| Business / Commercial | 835 |
+| Legal / Court | 864 |
+| Civil & Official Documents | 518 |
+| Medical | 923 |
+| Education / Academic | 640 |
+| Business / Commercial | 859 |
 
 Questions come in three levels: **Easy** (1,161), **Intermediate** (2,346) and
-**Hard** (185). All Arabic is Modern Standard Arabic in a professional
+**Hard** (305). All Arabic is Modern Standard Arabic in a professional
 register, with no country-specific bias.
 
 ### Question types
@@ -67,7 +67,7 @@ they want) to save or share. Keyboard shortcuts: `1`–`4` or `A`–`D` to answe
 | File | Purpose |
 |---|---|
 | `index.html` | The whole app as one self-contained page: design, fonts, icons and logo are built in. |
-| `questions.json` | The question bank (3,692 questions). The page loads it from the same folder. |
+| `questions.json` | The question bank (3,812 questions). The page loads it from the same folder. |
 | `og-image.png` | Preview image shown when the link is shared (WhatsApp, LinkedIn, etc.). |
 | `favicon.png`, `apple-touch-icon.png` | Browser tab and home-screen icons. |
 

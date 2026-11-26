@@ -21,18 +21,18 @@
       "explanation": "why the answer is correct / rationale"
     },
     "counts": {
-      "total": 3692,
+      "total": 3812,
       "by_level": {
         "easy": 1161,
         "intermediate": 2346,
-        "hard": 185
+        "hard": 305
       },
       "by_domain": {
-        "Legal / Court": 840,
-        "Civil & Official Documents": 494,
-        "Medical": 899,
-        "Education / Academic": 616,
-        "Business / Commercial": 835,
+        "Legal / Court": 864,
+        "Civil & Official Documents": 518,
+        "Medical": 923,
+        "Education / Academic": 640,
+        "Business / Commercial": 859,
         "Transliteration": 3,
         "General": 3,
         "Numbers & Formatting": 2
@@ -40,12 +40,12 @@
       "by_type": {
         "term_en_ar": 1161,
         "term_ar_en": 1161,
-        "near_synonym": 47,
+        "near_synonym": 68,
         "matching_pair": 1161,
-        "best_translation": 52,
-        "error_spotting": 30,
-        "false_friend": 59,
-        "register": 20,
+        "best_translation": 88,
+        "error_spotting": 57,
+        "false_friend": 80,
+        "register": 35,
         "quality": 1
       }
     }
@@ -62814,6 +62814,2046 @@
       "answer_index": 1,
       "answer": "يتحمّل البائع كافة تكاليف الشحن.",
       "explanation": "«يتحمّل البائع كافة تكاليف الشحن» is precise and formal, with «يتحمّل/كافة»."
+    },
+    {
+      "id": "Q03693",
+      "level": "hard",
+      "domain": "legal",
+      "domain_label": "Legal / Court",
+      "type": "best_translation",
+      "question": "Best rendering of: «The defendant was acquitted of all charges.»",
+      "options": [
+        "أُعفي المتهم من جميع الرسوم.",
+        "بُرِّئ المتهم من جميع التهم.",
+        "أُدين المتهم بجميع التهم.",
+        "سُومِح المتهم في جميع الاتهامات."
+      ],
+      "answer_index": 1,
+      "answer": "بُرِّئ المتهم من جميع التهم.",
+      "explanation": "“Acquitted” = بُرِّئ (تبرئة). In a criminal case “charges” are التهم — الرسوم would be fees."
+    },
+    {
+      "id": "Q03694",
+      "level": "hard",
+      "domain": "legal",
+      "domain_label": "Legal / Court",
+      "type": "best_translation",
+      "question": "Best rendering of: «The court dismissed the appeal and upheld the judgment of the Court of First Instance.»",
+      "options": [
+        "قبلت المحكمة الاستئناف وألغت حكم محكمة الدرجة الأولى.",
+        "صرفت المحكمة الاستئناف ورفعت حكم المحكمة الابتدائية.",
+        "أهملت المحكمة الطعن وحفظت قرار المحكمة الأولى.",
+        "رفضت المحكمة الاستئناف وأيّدت حكم محكمة الدرجة الأولى."
+      ],
+      "answer_index": 3,
+      "answer": "رفضت المحكمة الاستئناف وأيّدت حكم محكمة الدرجة الأولى.",
+      "explanation": "“Dismiss an appeal” = رفض الاستئناف; “uphold a judgment” = أيّد الحكم. Option 1 reverses the outcome; صرف and رفع are literal calques."
+    },
+    {
+      "id": "Q03695",
+      "level": "hard",
+      "domain": "legal",
+      "domain_label": "Legal / Court",
+      "type": "best_translation",
+      "question": "Best rendering of: «The judgment shall become final upon expiry of the appeal period.»",
+      "options": [
+        "يصير القرار أخيرًا عند انتهاء فترة الاستئناف.",
+        "يصبح الحكم نهائيًا قبل انقضاء ميعاد الاستئناف.",
+        "يصبح الحكم نهائيًا بانقضاء ميعاد الاستئناف.",
+        "ينتهي الحكم بانتهاء مدة الطعن."
+      ],
+      "answer_index": 2,
+      "answer": "يصبح الحكم نهائيًا بانقضاء ميعاد الاستئناف.",
+      "explanation": "A judgment that can no longer be appealed is نهائي (not أخير, “last”). “Upon expiry” = بانقضاء, not قبل."
+    },
+    {
+      "id": "Q03696",
+      "level": "hard",
+      "domain": "legal",
+      "domain_label": "Legal / Court",
+      "type": "best_translation",
+      "question": "Best rendering of the contract opening: «The Parties hereby agree as follows:»",
+      "options": [
+        "يوافق الحزبان بهذا كالتالي:",
+        "الأطراف هنا يتفقون كما يتبع:",
+        "اتفق الطرفان على ما سبق:",
+        "اتفق الطرفان على ما يلي:"
+      ],
+      "answer_index": 3,
+      "answer": "اتفق الطرفان على ما يلي:",
+      "explanation": "Contracting parties are الطرفان (dual) — حزب is a political party. «على ما يلي» introduces what follows; «ما سبق» refers back."
+    },
+    {
+      "id": "Q03697",
+      "level": "hard",
+      "domain": "legal",
+      "domain_label": "Legal / Court",
+      "type": "best_translation",
+      "question": "Best rendering of: «Without prejudice to the provisions of Article 12 …»",
+      "options": [
+        "بدون تحيّز لأحكام المادة 12 …",
+        "بغير تعصّب لأحكام المادة 12 …",
+        "مع عدم الإخلال بأحكام المادة 12 …",
+        "بصرف النظر عن أحكام المادة 12 …"
+      ],
+      "answer_index": 2,
+      "answer": "مع عدم الإخلال بأحكام المادة 12 …",
+      "explanation": "“Without prejudice to” is the fixed formula مع عدم الإخلال بـ. تحيّز/تعصّب read “prejudice” as bias; بصرف النظر عن means “notwithstanding” — the opposite effect."
+    },
+    {
+      "id": "Q03698",
+      "level": "hard",
+      "domain": "legal",
+      "domain_label": "Legal / Court",
+      "type": "best_translation",
+      "question": "Best English rendering of: «حُكم على المتهم غيابيًا بالحبس سنة.»",
+      "options": [
+        "The accused was judged absently with a year of detention.",
+        "The accused was sentenced in his presence to one year’s imprisonment.",
+        "The accused was sentenced in absentia to one year’s imprisonment.",
+        "The accused was absent and was judged a year ago."
+      ],
+      "answer_index": 2,
+      "answer": "The accused was sentenced in absentia to one year’s imprisonment.",
+      "explanation": "غيابيًا = in absentia (the accused was not present). Option 2 states the opposite; option 4 misreads سنة as the time of the judgment."
+    },
+    {
+      "id": "Q03699",
+      "level": "hard",
+      "domain": "legal",
+      "domain_label": "Legal / Court",
+      "type": "best_translation",
+      "question": "Best rendering of: «The witness was sworn in before giving testimony.»",
+      "options": [
+        "حلف الشاهد اليمين بعد أن أدلى بشهادته.",
+        "أدّى الشاهد اليمين قبل الإدلاء بشهادته.",
+        "عُيِّن الشاهد في منصبه قبل الشهادة.",
+        "شتم الشاهد قبل أن يشهد."
+      ],
+      "answer_index": 1,
+      "answer": "أدّى الشاهد اليمين قبل الإدلاء بشهادته.",
+      "explanation": "“To be sworn in” = أدّى اليمين; “give testimony” = الإدلاء بالشهادة. Option 3 reads “sworn in” as appointed to office; option 4 reads “swear” as curse."
+    },
+    {
+      "id": "Q03700",
+      "level": "hard",
+      "domain": "legal",
+      "domain_label": "Legal / Court",
+      "type": "error_spotting",
+      "question": "A draft renders “the defendant” as «المدعي عليه». What is wrong?",
+      "options": [
+        "No error",
+        "It should be «المتهم» in every case",
+        "It should be «الخصم»",
+        "It should be «المدعى عليه» — المدعي (with ي) is the plaintiff"
+      ],
+      "answer_index": 3,
+      "answer": "It should be «المدعى عليه» — المدعي (with ي) is the plaintiff",
+      "explanation": "المدَّعي (ي) is the plaintiff; المدَّعى عليه (ى) is the defendant. One letter reverses the parties."
+    },
+    {
+      "id": "Q03701",
+      "level": "hard",
+      "domain": "legal",
+      "domain_label": "Legal / Court",
+      "type": "error_spotting",
+      "question": "“Article 405 of the UAE Penal Code” is drafted «البند 405 من قانون العقوبات الإماراتي». What is the error?",
+      "options": [
+        "No error",
+        "«قانون العقوبات» should be «قانون الجزاءات»",
+        "The number must be written in words",
+        "«البند» should be «المادة» — a statute is divided into articles"
+      ],
+      "answer_index": 3,
+      "answer": "«البند» should be «المادة» — a statute is divided into articles",
+      "explanation": "Laws are divided into مواد (المادة 405). بند is used for clauses or items of a contract."
+    },
+    {
+      "id": "Q03702",
+      "level": "hard",
+      "domain": "legal",
+      "domain_label": "Legal / Court",
+      "type": "error_spotting",
+      "question": "“He was released on bail” is drafted «أُطلق سراحه بكفالة». Is there an error?",
+      "options": [
+        "No error — this is correct",
+        "«كفالة» should be «ضمان»",
+        "«أُطلق سراحه» should be «أُفرج عن جسده»",
+        "«بكفالة» must be followed by «مالية» or it is wrong"
+      ],
+      "answer_index": 0,
+      "answer": "No error — this is correct",
+      "explanation": "«أُطلق سراحه بكفالة» (or «أُفرج عنه بكفالة») is the standard rendering. Not every draft contains an error."
+    },
+    {
+      "id": "Q03703",
+      "level": "hard",
+      "domain": "legal",
+      "domain_label": "Legal / Court",
+      "type": "error_spotting",
+      "question": "In a police report, “The complainant stated that his phone had been stolen” is drafted «أفاد المشتكى عليه بأن هاتفه قد سُرق». The defect:",
+      "options": [
+        "«المشتكى عليه» is the accused; the complainant is «الشاكي» (المشتكي)",
+        "No defect",
+        "«أفاد» should be «قال»",
+        "«سُرق» should be «ضاع»"
+      ],
+      "answer_index": 0,
+      "answer": "«المشتكى عليه» is the accused; the complainant is «الشاكي» (المشتكي)",
+      "explanation": "الشاكي/المشتكي files the complaint; المشتكى عليه is the person complained against. Swapping them misstates who is who."
+    },
+    {
+      "id": "Q03704",
+      "level": "hard",
+      "domain": "legal",
+      "domain_label": "Legal / Court",
+      "type": "error_spotting",
+      "question": "“The Lessee shall pay the rent monthly” is drafted «يلتزم المؤجِّر بسداد الأجرة شهريًا». The error:",
+      "options": [
+        "The lessee is «المستأجر»; «المؤجِّر» is the lessor (landlord)",
+        "No error",
+        "«الأجرة» should be «الإيجار السنوي»",
+        "«شهريًا» should be «سنويًا»"
+      ],
+      "answer_index": 0,
+      "answer": "The lessee is «المستأجر»; «المؤجِّر» is the lessor (landlord)",
+      "explanation": "المؤجِّر = lessor (owner who rents out); المستأجر = lessee (tenant). The draft puts the payment duty on the wrong party."
+    },
+    {
+      "id": "Q03705",
+      "level": "hard",
+      "domain": "legal",
+      "domain_label": "Legal / Court",
+      "type": "false_friend",
+      "question": "“The suspect was charged with fraud.” Here “charged” means:",
+      "options": [
+        "فُرضت عليه رسوم بسبب الاحتيال",
+        "وُجِّهت إليه تهمة الاحتيال",
+        "شُحِن بالاحتيال",
+        "أُدين بالاحتيال وصدر عليه حكم"
+      ],
+      "answer_index": 1,
+      "answer": "وُجِّهت إليه تهمة الاحتيال",
+      "explanation": "To be “charged with” an offence = وُجِّهت إليه تهمة. It is not a fee (رسوم) or electrical charging (شحن), and it is not yet a conviction (إدانة)."
+    },
+    {
+      "id": "Q03706",
+      "level": "hard",
+      "domain": "legal",
+      "domain_label": "Legal / Court",
+      "type": "false_friend",
+      "question": "“The judge issued a warrant for his arrest.” Here “warrant” is:",
+      "options": [
+        "ضمان",
+        "كفالة",
+        "أمر (قبض)",
+        "تفويض"
+      ],
+      "answer_index": 2,
+      "answer": "أمر (قبض)",
+      "explanation": "An arrest warrant = أمر قبض. ضمان is a product warranty; كفالة is bail or surety; تفويض is an authorisation."
+    },
+    {
+      "id": "Q03707",
+      "level": "hard",
+      "domain": "legal",
+      "domain_label": "Legal / Court",
+      "type": "false_friend",
+      "question": "In a contract, “for good and valuable consideration” — “consideration” is:",
+      "options": [
+        "الاعتبار",
+        "المقابل (العِوَض)",
+        "المراعاة",
+        "الدراسة والتأمل"
+      ],
+      "answer_index": 1,
+      "answer": "المقابل (العِوَض)",
+      "explanation": "In contract law “consideration” is what each party gives in exchange: المقابل / العِوَض — not “consideration” in the sense of thought or regard."
+    },
+    {
+      "id": "Q03708",
+      "level": "hard",
+      "domain": "legal",
+      "domain_label": "Legal / Court",
+      "type": "near_synonym",
+      "question": "“Court of Cassation” (the highest court reviewing points of law) is:",
+      "options": [
+        "محكمة النقض",
+        "محكمة الاستئناف",
+        "المحكمة الابتدائية",
+        "المحكمة الإدارية"
+      ],
+      "answer_index": 0,
+      "answer": "محكمة النقض",
+      "explanation": "Cassation = النقض (called التمييز in some Arab states). محكمة الاستئناف is the appeal court below it."
+    },
+    {
+      "id": "Q03709",
+      "level": "hard",
+      "domain": "legal",
+      "domain_label": "Legal / Court",
+      "type": "near_synonym",
+      "question": "“Affidavit” (a written statement confirmed by oath) is best rendered:",
+      "options": [
+        "إفادة شفهية أمام الشرطة",
+        "إفادة خطية مشفوعة باليمين",
+        "وكالة عامة",
+        "تعهّد غير مُلزِم"
+      ],
+      "answer_index": 1,
+      "answer": "إفادة خطية مشفوعة باليمين",
+      "explanation": "An affidavit is written and sworn: إفادة (شهادة) خطية مشفوعة باليمين / بقسم."
+    },
+    {
+      "id": "Q03710",
+      "level": "hard",
+      "domain": "legal",
+      "domain_label": "Legal / Court",
+      "type": "near_synonym",
+      "question": "“Embezzlement of public funds” (by a public official) is precisely:",
+      "options": [
+        "سرقة المال العام",
+        "خيانة الأمانة في المال العام",
+        "اختلاس المال العام",
+        "الاحتيال على المال العام"
+      ],
+      "answer_index": 2,
+      "answer": "اختلاس المال العام",
+      "explanation": "Misappropriation by an official entrusted with public money = اختلاس. خيانة الأمانة is the general offence for privately entrusted property (as in the Dubai judgment); سرقة and احتيال are different crimes."
+    },
+    {
+      "id": "Q03711",
+      "level": "hard",
+      "domain": "legal",
+      "domain_label": "Legal / Court",
+      "type": "near_synonym",
+      "question": "“The claim is barred by the statute of limitations.” “Statute of limitations” here is:",
+      "options": [
+        "التقادم",
+        "قانون القيود",
+        "مدة الصلاحية",
+        "سقوط الحكم"
+      ],
+      "answer_index": 0,
+      "answer": "التقادم",
+      "explanation": "A claim lost through the passage of time is barred by التقادم («سقطت الدعوى بالتقادم»). قانون القيود is a literal calque."
+    },
+    {
+      "id": "Q03712",
+      "level": "hard",
+      "domain": "legal",
+      "domain_label": "Legal / Court",
+      "type": "register",
+      "question": "The closing formula of a contract, “Executed in two original counterparts, one for each Party”, is:",
+      "options": [
+        "انكتب العقد مرتين، كل واحد ياخذ ورقة.",
+        "حُرِّر هذا العقد من نسختين أصليتين، بيد كل طرف نسخة للعمل بموجبها.",
+        "نُفِّذ هذا العقد في نسختين مقابلتين لكل حزب.",
+        "تم إعدام هذا العقد من نسختين أصليتين."
+      ],
+      "answer_index": 1,
+      "answer": "حُرِّر هذا العقد من نسختين أصليتين، بيد كل طرف نسخة للعمل بموجبها.",
+      "explanation": "«حُرِّر … من نسختين أصليتين بيد كل طرف نسخة» is the established closing formula. “Executed” here means signed — never إعدام (execution of a person)."
+    },
+    {
+      "id": "Q03713",
+      "level": "hard",
+      "domain": "legal",
+      "domain_label": "Legal / Court",
+      "type": "register",
+      "question": "At the end of a judgment, “Pronounced in open court” is conventionally:",
+      "options": [
+        "قالوا الحكم قدام الناس.",
+        "صدر هذا الحكم وتُلي علنًا.",
+        "انقال الحكم بالعلن في المحكمة المفتوحة.",
+        "أُعلن الحكم في المحكمة غير المغلقة."
+      ],
+      "answer_index": 1,
+      "answer": "صدر هذا الحكم وتُلي علنًا.",
+      "explanation": "«صدر هذا الحكم وتُلي علنًا» (or «بجلسة علنية») is the fixed formula. The others are colloquial or literal."
+    },
+    {
+      "id": "Q03714",
+      "level": "hard",
+      "domain": "legal",
+      "domain_label": "Legal / Court",
+      "type": "register",
+      "question": "A petition to a court ends: “We therefore pray the Honourable Court to …”. The register-appropriate Arabic is:",
+      "options": [
+        "لذلك نصلّي للمحكمة المحترمة …",
+        "فبدنا من المحكمة …",
+        "لذا نلتمس من عدالة المحكمة الموقرة …",
+        "لهذا نطلب منكِ يا محكمة …"
+      ],
+      "answer_index": 2,
+      "answer": "لذا نلتمس من عدالة المحكمة الموقرة …",
+      "explanation": "In petitions “pray” means “request”: نلتمس من عدالة المحكمة الموقرة. نصلّي (religious prayer) is a false friend; the others are colloquial."
+    },
+    {
+      "id": "Q03715",
+      "level": "hard",
+      "domain": "civil",
+      "domain_label": "Civil & Official Documents",
+      "type": "best_translation",
+      "question": "Best rendering of: «This is to certify that the information given below has been taken from the original record of births.»",
+      "options": [
+        "هذا لتصديق أن المعلومات المعطاة تحت أُخذت من الدفتر الأصلي للولادات.",
+        "نشهد بأن المعلومات الواردة أدناه مستخرجة من السجل الأصلي للمواليد.",
+        "نشهد بأن المعلومات الواردة أدناه مستخرجة من السجل الأصلي للوفيات.",
+        "هذا يؤكد أن المعلومات تحت مأخوذة من الأصل."
+      ],
+      "answer_index": 1,
+      "answer": "نشهد بأن المعلومات الواردة أدناه مستخرجة من السجل الأصلي للمواليد.",
+      "explanation": "“This is to certify that” = نشهد بأن; “given below” = الواردة أدناه; “taken from the record” = مستخرجة من السجل. Option 2 changes births to deaths."
+    },
+    {
+      "id": "Q03716",
+      "level": "hard",
+      "domain": "civil",
+      "domain_label": "Civil & Official Documents",
+      "type": "best_translation",
+      "question": "Best English rendering of the stamp «صورة طبق الأصل»:",
+      "options": [
+        "Original copy",
+        "Photograph of the original",
+        "Similar copy",
+        "True copy of the original"
+      ],
+      "answer_index": 3,
+      "answer": "True copy of the original",
+      "explanation": "«صورة طبق الأصل» certifies that a copy matches the original exactly: “True copy (of the original)”. It is not itself the original."
+    },
+    {
+      "id": "Q03717",
+      "level": "hard",
+      "domain": "civil",
+      "domain_label": "Civil & Official Documents",
+      "type": "best_translation",
+      "question": "Best rendering of the note: «The child’s name must be entered within one year of the date of registration.»",
+      "options": [
+        "يمكن قيد اسم الطفل بعد سنة من تاريخ التسجيل.",
+        "يجب دخول اسم الطفل في سنة واحدة بعد الميلاد.",
+        "يجب قيد اسم الطفل خلال سنة من تاريخ التسجيل.",
+        "لازم يكتبوا اسم الولد خلال سنة."
+      ],
+      "answer_index": 2,
+      "answer": "يجب قيد اسم الطفل خلال سنة من تاريخ التسجيل.",
+      "explanation": "“Entered (in a register)” = قيد, not دخول. “Within one year of registration” — option 2 changes the deadline and option 3 changes the starting point."
+    },
+    {
+      "id": "Q03718",
+      "level": "hard",
+      "domain": "civil",
+      "domain_label": "Civil & Official Documents",
+      "type": "best_translation",
+      "question": "Best rendering of the closing line: «Issued under my hand and seal on the 11th day of November 2011.»",
+      "options": [
+        "صدرت تحت يدي وختمي في اليوم الحادي عشر من نوفمبر 2011.",
+        "أصدرتها بخط يدي وطابعي في 11 نوفمبر 2011.",
+        "سُلِّمت إلى يدي مع الختم يوم 11 نوفمبر 2011.",
+        "صدرت تحت إشرافي في الحادي عشر من نوفمبر 2012."
+      ],
+      "answer_index": 0,
+      "answer": "صدرت تحت يدي وختمي في اليوم الحادي عشر من نوفمبر 2011.",
+      "explanation": "“Under my hand and seal” is a fixed formula: تحت يدي وختمي (signed and sealed by me). It does not mean handwritten or handed over."
+    },
+    {
+      "id": "Q03719",
+      "level": "hard",
+      "domain": "civil",
+      "domain_label": "Civil & Official Documents",
+      "type": "best_translation",
+      "question": "Best English rendering of: «لا مانع لدينا من سفره.»",
+      "options": [
+        "We have no barrier from his travel.",
+        "Nothing prevents us from travelling.",
+        "We have no objection to his travelling.",
+        "We do not prevent his journey permanently."
+      ],
+      "answer_index": 2,
+      "answer": "We have no objection to his travelling.",
+      "explanation": "«لا مانع لدينا من …» is the standard No-Objection wording: “We have no objection to …”. Option 3 makes the writer the traveller."
+    },
+    {
+      "id": "Q03720",
+      "level": "hard",
+      "domain": "civil",
+      "domain_label": "Civil & Official Documents",
+      "type": "error_spotting",
+      "question": "An attestation stamp reads “Embassy of the UAE, New Delhi”. The draft writes «قنصلية الإمارات العربية المتحدة – نيودلهي». The error:",
+      "options": [
+        "No error",
+        "Embassy is «سفارة»; «قنصلية» is a consulate",
+        "«نيودلهي» should be «دلهي الجديدة»",
+        "«الإمارات العربية المتحدة» should be abbreviated"
+      ],
+      "answer_index": 1,
+      "answer": "Embassy is «سفارة»; «قنصلية» is a consulate",
+      "explanation": "سفارة (embassy, in the capital) and قنصلية (consulate, e.g. in Mumbai) are different missions; the stamp must name the right one."
+    },
+    {
+      "id": "Q03721",
+      "level": "hard",
+      "domain": "civil",
+      "domain_label": "Civil & Official Documents",
+      "type": "error_spotting",
+      "question": "“Registrar of Births and Deaths” is drafted «مسجّل المواليد والوفيات». Is there an error?",
+      "options": [
+        "«مسجّل» should be «كاتب»",
+        "No error — this is correct",
+        "«المواليد» should be «الولادات الحية»",
+        "The order must be «الوفيات والمواليد»"
+      ],
+      "answer_index": 1,
+      "answer": "No error — this is correct",
+      "explanation": "«مسجّل المواليد والوفيات» is the correct title. Not every draft contains an error."
+    },
+    {
+      "id": "Q03722",
+      "level": "hard",
+      "domain": "civil",
+      "domain_label": "Civil & Official Documents",
+      "type": "error_spotting",
+      "question": "A Saudi-bound document: the passport shows Place of Birth “CALICUT”. The draft writes «كوزيكود». What is wrong?",
+      "options": [
+        "It should follow the passport: «كاليكوت»",
+        "No error — any accepted spelling of the city will do",
+        "It should be «كيرالا»",
+        "Place names must not be translated"
+      ],
+      "answer_index": 0,
+      "answer": "It should follow the passport: «كاليكوت»",
+      "explanation": "The translation must match the passport the receiving authority will compare it with: CALICUT → «كاليكوت»."
+    },
+    {
+      "id": "Q03723",
+      "level": "hard",
+      "domain": "civil",
+      "domain_label": "Civil & Official Documents",
+      "type": "error_spotting",
+      "question": "A date written out in words appears as «(ثمانية عشر يناير، ألفان وأربعة)». What is the problem?",
+      "options": [
+        "No problem",
+        "«يناير» must be «كانون الثاني»",
+        "Dates must never be written in words",
+        "The day should be ordinal and the year in the genitive: «الثامن عشر من يناير عام ألفين وأربعة»"
+      ],
+      "answer_index": 3,
+      "answer": "The day should be ordinal and the year in the genitive: «الثامن عشر من يناير عام ألفين وأربعة»",
+      "explanation": "Days of the month take the ordinal (الثامن عشر), and the year after «عام» is genitive (ألفين). Either month name is acceptable; MSA neutrality allows يناير."
+    },
+    {
+      "id": "Q03724",
+      "level": "hard",
+      "domain": "civil",
+      "domain_label": "Civil & Official Documents",
+      "type": "false_friend",
+      "question": "“The document was legalized by the embassy.” Here “legalized” means:",
+      "options": [
+        "قُنِّن",
+        "صُدِّق (تمّ تصديقه)",
+        "شُرِّع",
+        "أصبح قانونيًا بعد أن كان ممنوعًا"
+      ],
+      "answer_index": 1,
+      "answer": "صُدِّق (تمّ تصديقه)",
+      "explanation": "Legalization of a document = تصديق (verifying the seal and signature). تقنين/تشريع refer to making laws."
+    },
+    {
+      "id": "Q03725",
+      "level": "hard",
+      "domain": "civil",
+      "domain_label": "Civil & Official Documents",
+      "type": "false_friend",
+      "question": "On a form, “Next of kin” is:",
+      "options": [
+        "الجيل القادم",
+        "القريب التالي في الدور",
+        "الوريث الشرعي",
+        "أقرب الأقارب"
+      ],
+      "answer_index": 3,
+      "answer": "أقرب الأقارب",
+      "explanation": "Next of kin = the nearest relative to contact. It is not the next generation, and not necessarily the legal heir."
+    },
+    {
+      "id": "Q03726",
+      "level": "hard",
+      "domain": "civil",
+      "domain_label": "Civil & Official Documents",
+      "type": "false_friend",
+      "question": "On a passport application, “Given name” is:",
+      "options": [
+        "الاسم الممنوح",
+        "اسم العائلة",
+        "اللقب",
+        "الاسم الأول"
+      ],
+      "answer_index": 3,
+      "answer": "الاسم الأول",
+      "explanation": "Given name = first name (الاسم الأول). الممنوح is a literal calque; surname/family name is اسم العائلة."
+    },
+    {
+      "id": "Q03727",
+      "level": "hard",
+      "domain": "civil",
+      "domain_label": "Civil & Official Documents",
+      "type": "false_friend",
+      "question": "“He died without issue.” Here “issue” means:",
+      "options": [
+        "مشكلة",
+        "إصدار",
+        "ذرية (أبناء)",
+        "وصية"
+      ],
+      "answer_index": 2,
+      "answer": "ذرية (أبناء)",
+      "explanation": "In legal and civil documents “issue” means children/descendants: «تُوفي دون ذرية» (دون عقب)."
+    },
+    {
+      "id": "Q03728",
+      "level": "hard",
+      "domain": "civil",
+      "domain_label": "Civil & Official Documents",
+      "type": "near_synonym",
+      "question": "On a minor’s birth or school record, “Guardian” is best:",
+      "options": [
+        "الكفيل",
+        "وليّ الأمر",
+        "الحارس",
+        "المُعيل"
+      ],
+      "answer_index": 1,
+      "answer": "وليّ الأمر",
+      "explanation": "The person legally responsible for a minor = وليّ الأمر. الكفيل is a sponsor (in the Gulf), الحارس a guard, المعيل a breadwinner."
+    },
+    {
+      "id": "Q03729",
+      "level": "hard",
+      "domain": "civil",
+      "domain_label": "Civil & Official Documents",
+      "type": "near_synonym",
+      "question": "“Maiden name” is:",
+      "options": [
+        "اسم الأم",
+        "الاسم الأول",
+        "اسم الفتاة",
+        "اسم العائلة قبل الزواج"
+      ],
+      "answer_index": 3,
+      "answer": "اسم العائلة قبل الزواج",
+      "explanation": "Maiden name = a woman’s family name before marriage. It is not the mother’s name."
+    },
+    {
+      "id": "Q03730",
+      "level": "hard",
+      "domain": "civil",
+      "domain_label": "Civil & Official Documents",
+      "type": "near_synonym",
+      "question": "For a man, “Marital status: Widower” is:",
+      "options": [
+        "أرمل",
+        "أرملة",
+        "مطلّق",
+        "أعزب"
+      ],
+      "answer_index": 0,
+      "answer": "أرمل",
+      "explanation": "Widower (male) = أرمل; widow (female) = أرملة. The gender must match the holder."
+    },
+    {
+      "id": "Q03731",
+      "level": "hard",
+      "domain": "civil",
+      "domain_label": "Civil & Official Documents",
+      "type": "near_synonym",
+      "question": "The title “No Objection Certificate (NOC)” is best:",
+      "options": [
+        "شهادة عدم ممانعة",
+        "شهادة عدم الرفض",
+        "ورقة ما في مانع",
+        "شهادة عدم المحكومية"
+      ],
+      "answer_index": 0,
+      "answer": "شهادة عدم ممانعة",
+      "explanation": "NOC = شهادة (خطاب) عدم ممانعة. شهادة عدم المحكومية is a different document (no criminal record)."
+    },
+    {
+      "id": "Q03732",
+      "level": "hard",
+      "domain": "civil",
+      "domain_label": "Civil & Official Documents",
+      "type": "register",
+      "question": "An official Indian letter ends: “Kindly do the needful.” The register-appropriate Arabic is:",
+      "options": [
+        "اعمل اللي لازم من فضلك.",
+        "يُرجى اتخاذ اللازم.",
+        "بلطف افعل المحتاج.",
+        "رجاءً قم بالضروري بلطف."
+      ],
+      "answer_index": 1,
+      "answer": "يُرجى اتخاذ اللازم.",
+      "explanation": "«يُرجى اتخاذ اللازم» (or «… الإجراءات اللازمة») is the formal equivalent. The others are colloquial or literal."
+    },
+    {
+      "id": "Q03733",
+      "level": "hard",
+      "domain": "civil",
+      "domain_label": "Civil & Official Documents",
+      "type": "register",
+      "question": "“The above-named person” in an official certificate is:",
+      "options": [
+        "المذكور أعلاه",
+        "اللي فوق",
+        "المسمّى فوقه",
+        "الشخص الذي اسمه فوق"
+      ],
+      "answer_index": 0,
+      "answer": "المذكور أعلاه",
+      "explanation": "«المذكور أعلاه» (fem. المذكورة أعلاه) is the fixed formal expression; the others are colloquial or awkward."
+    },
+    {
+      "id": "Q03734",
+      "level": "hard",
+      "domain": "civil",
+      "domain_label": "Civil & Official Documents",
+      "type": "register",
+      "question": "The certificate formula “We hereby certify that …” is:",
+      "options": [
+        "نحن هنا نؤكد إن …",
+        "إحنا بنشهد إن …",
+        "نشهد بموجب هذا بأن …",
+        "نحن نعطي شهادة هنا أن …"
+      ],
+      "answer_index": 2,
+      "answer": "نشهد بموجب هذا بأن …",
+      "explanation": "«نشهد بموجب هذا بأن» (or simply «نشهد بأن») is the formal certifying wording. The others are colloquial or literal."
+    },
+    {
+      "id": "Q03735",
+      "level": "hard",
+      "domain": "medical",
+      "domain_label": "Medical",
+      "type": "best_translation",
+      "question": "Best rendering of the prescription line: «One capsule three times daily after food for 10 days»",
+      "options": [
+        "كبسولة واحدة ثلاث مرات يوميًا بعد الأكل لمدة 10 أيام",
+        "كبسولة واحدة كل ثلاثة أيام بعد الأكل لمدة 10 أيام",
+        "ثلاث كبسولات مرة واحدة يوميًا بعد الأكل لمدة 10 أيام",
+        "كبسولة واحدة ثلاث مرات يوميًا قبل الأكل لمدة 10 أيام"
+      ],
+      "answer_index": 0,
+      "answer": "كبسولة واحدة ثلاث مرات يوميًا بعد الأكل لمدة 10 أيام",
+      "explanation": "Dose (one capsule), frequency (three times daily), timing (after food) and duration (10 days) must all be exact. Each wrong option changes one of them."
+    },
+    {
+      "id": "Q03736",
+      "level": "hard",
+      "domain": "medical",
+      "domain_label": "Medical",
+      "type": "best_translation",
+      "question": "Best rendering of: «Kindly arrive 20 minutes before the scheduled time to complete the registration process.»",
+      "options": [
+        "يُرجى الحضور بعد الموعد المحدد بعشرين دقيقة لاستكمال إجراءات التسجيل.",
+        "بلطف تعال 20 دقيقة قبل الوقت المجدول لإكمال عملية التسجيل.",
+        "يُرجى الحضور قبل الموعد المحدد بعشرين ساعة لاستكمال التسجيل.",
+        "يُرجى الحضور قبل الموعد المحدد بعشرين دقيقة لاستكمال إجراءات التسجيل."
+      ],
+      "answer_index": 3,
+      "answer": "يُرجى الحضور قبل الموعد المحدد بعشرين دقيقة لاستكمال إجراءات التسجيل.",
+      "explanation": "“Kindly” = يُرجى (not بلطف). “Before the scheduled time” = قبل الموعد المحدد; options 1 and 4 change the timing."
+    },
+    {
+      "id": "Q03737",
+      "level": "hard",
+      "domain": "medical",
+      "domain_label": "Medical",
+      "type": "best_translation",
+      "question": "Best rendering of: «Patients for cardiac evaluation should avoid heavy meals 2 hours before the consultation.»",
+      "options": [
+        "على مرضى فحص القلب تجنّب الوجبات الدسمة بعد الاستشارة بساعتين.",
+        "على مرضى فحص القلب تناول وجبة ثقيلة قبل الاستشارة بساعتين.",
+        "على مرضى فحص القلب تجنّب الوجبات الثقيلة قبل الاستشارة بساعتين.",
+        "مرضى تقييم القلب لازم يبعدوا عن الأكل التقيل ساعتين."
+      ],
+      "answer_index": 2,
+      "answer": "على مرضى فحص القلب تجنّب الوجبات الثقيلة قبل الاستشارة بساعتين.",
+      "explanation": "The instruction is to avoid heavy meals in the 2 hours before the appointment. Options 1 and 2 change the timing or reverse it; option 4 is colloquial."
+    },
+    {
+      "id": "Q03738",
+      "level": "hard",
+      "domain": "medical",
+      "domain_label": "Medical",
+      "type": "best_translation",
+      "question": "Best English rendering of: «يُؤخذ على معدة فارغة.»",
+      "options": [
+        "To be taken on an empty stomach.",
+        "To be taken after a full meal.",
+        "Take with an empty bowl.",
+        "Take it out of the stomach."
+      ],
+      "answer_index": 0,
+      "answer": "To be taken on an empty stomach.",
+      "explanation": "«على معدة فارغة» = “on an empty stomach”, the standard label instruction."
+    },
+    {
+      "id": "Q03739",
+      "level": "hard",
+      "domain": "medical",
+      "domain_label": "Medical",
+      "type": "best_translation",
+      "question": "Best rendering of the leaflet warning: «Contraindicated in pregnancy.»",
+      "options": [
+        "يُمنع استعماله أثناء الحمل.",
+        "يُنصح باستعماله أثناء الحمل.",
+        "متناقض أثناء الحمل.",
+        "يُستعمل بحذر بعد الولادة."
+      ],
+      "answer_index": 0,
+      "answer": "يُمنع استعماله أثناء الحمل.",
+      "explanation": "“Contraindicated” = must not be used (يُمنع استعماله / موانع الاستعمال). متناقض is a literal error; option 1 reverses a safety warning."
+    },
+    {
+      "id": "Q03740",
+      "level": "hard",
+      "domain": "medical",
+      "domain_label": "Medical",
+      "type": "best_translation",
+      "question": "Best rendering of: «Book a follow-up appointment after two weeks.»",
+      "options": [
+        "احجز موعد مراجعة قبل أسبوعين.",
+        "احجز موعد مراجعة بعد أسبوعين.",
+        "احجز موعدًا كل أسبوعين.",
+        "احجز استشارة أولى بعد أسبوعين."
+      ],
+      "answer_index": 1,
+      "answer": "احجز موعد مراجعة بعد أسبوعين.",
+      "explanation": "A follow-up visit = موعد مراجعة (موعد متابعة), once, after two weeks. The other options change the timing, the frequency, or make it a first visit."
+    },
+    {
+      "id": "Q03741",
+      "level": "hard",
+      "domain": "medical",
+      "domain_label": "Medical",
+      "type": "error_spotting",
+      "question": "“Amoxicillin 500 mg” is drafted «أموكسيسيلين 500 مل». What is wrong?",
+      "options": [
+        "No error",
+        "«مل» is millilitres; milligrams is «ملغ» (ملّيغرام)",
+        "The drug name must be translated",
+        "500 must be written in words"
+      ],
+      "answer_index": 1,
+      "answer": "«مل» is millilitres; milligrams is «ملغ» (ملّيغرام)",
+      "explanation": "mg = ملغ; ml = مل. Confusing units in a dose is a serious error."
+    },
+    {
+      "id": "Q03742",
+      "level": "hard",
+      "domain": "medical",
+      "domain_label": "Medical",
+      "type": "error_spotting",
+      "question": "“Paracetamol as needed, maximum 4 tablets in 24 hours” is drafted «باراسيتامول عند الحاجة، بحد أدنى 4 أقراص خلال 24 ساعة». The error:",
+      "options": [
+        "«بحد أدنى» (minimum) should be «بحد أقصى» (maximum)",
+        "No error",
+        "«عند الحاجة» should be «يوميًا»",
+        "«أقراص» should be «كبسولات»"
+      ],
+      "answer_index": 0,
+      "answer": "«بحد أدنى» (minimum) should be «بحد أقصى» (maximum)",
+      "explanation": "The draft turns a safety limit into a minimum dose. Maximum = بحد أقصى / لا تتجاوز."
+    },
+    {
+      "id": "Q03743",
+      "level": "hard",
+      "domain": "medical",
+      "domain_label": "Medical",
+      "type": "error_spotting",
+      "question": "“Patient Number: RAH-2025-102” appears in the Arabic draft as «رقم المريض: 102-2025-RAH». What is wrong?",
+      "options": [
+        "No error — Arabic is right-to-left, so the code must be reversed",
+        "RAH must be transliterated",
+        "The code must be copied exactly as in the source; the segments were reversed",
+        "Patient numbers must be omitted"
+      ],
+      "answer_index": 2,
+      "answer": "The code must be copied exactly as in the source; the segments were reversed",
+      "explanation": "IDs, case numbers and codes are copied character for character in their original (left-to-right) order. Reversing them creates a different number."
+    },
+    {
+      "id": "Q03744",
+      "level": "hard",
+      "domain": "medical",
+      "domain_label": "Medical",
+      "type": "error_spotting",
+      "question": "A pathology report says “benign tumour”. The draft writes «ورم خبيث». The error:",
+      "options": [
+        "No error",
+        "«ورم» should be «كتلة»",
+        "Benign is «حميد»; «خبيث» means malignant",
+        "«خبيث» should be «سرطاني»"
+      ],
+      "answer_index": 2,
+      "answer": "Benign is «حميد»; «خبيث» means malignant",
+      "explanation": "حميد (benign) and خبيث (malignant) are opposites. This error would alarm the patient and mislead any doctor reading it."
+    },
+    {
+      "id": "Q03745",
+      "level": "hard",
+      "domain": "medical",
+      "domain_label": "Medical",
+      "type": "false_friend",
+      "question": "“The patient was admitted on 3 May.” Here “admitted” means:",
+      "options": [
+        "اعترف",
+        "قُبل في الجامعة",
+        "سُمح له بالزيارة",
+        "أُدخل المستشفى"
+      ],
+      "answer_index": 3,
+      "answer": "أُدخل المستشفى",
+      "explanation": "In a hospital record “admitted” = أُدخل المستشفى (دخول المستشفى), not confessed or accepted to a course."
+    },
+    {
+      "id": "Q03746",
+      "level": "hard",
+      "domain": "medical",
+      "domain_label": "Medical",
+      "type": "false_friend",
+      "question": "“The patient was taken to theatre at 10 a.m.” Here “theatre” is:",
+      "options": [
+        "المسرح",
+        "قاعة المحاضرات",
+        "غرفة الطوارئ",
+        "غرفة العمليات"
+      ],
+      "answer_index": 3,
+      "answer": "غرفة العمليات",
+      "explanation": "In British medical English “theatre” = operating theatre (غرفة العمليات)."
+    },
+    {
+      "id": "Q03747",
+      "level": "hard",
+      "domain": "medical",
+      "domain_label": "Medical",
+      "type": "false_friend",
+      "question": "“Change the dressing daily.” Here “dressing” is:",
+      "options": [
+        "الملابس",
+        "الصلصة",
+        "التزيين",
+        "الضمادة"
+      ],
+      "answer_index": 3,
+      "answer": "الضمادة",
+      "explanation": "A wound dressing = الضمادة (الضماد). The other meanings of “dressing” do not apply."
+    },
+    {
+      "id": "Q03748",
+      "level": "hard",
+      "domain": "medical",
+      "domain_label": "Medical",
+      "type": "near_synonym",
+      "question": "On an appointment letter, “Consultant Cardiologist” is:",
+      "options": [
+        "جرّاح القلب",
+        "طبيب عام",
+        "فني تخطيط القلب",
+        "استشاري أمراض القلب"
+      ],
+      "answer_index": 3,
+      "answer": "استشاري أمراض القلب",
+      "explanation": "A cardiologist (طبيب/استشاري أمراض القلب) treats heart disease medically; a cardiac surgeon (جرّاح القلب) operates."
+    },
+    {
+      "id": "Q03749",
+      "level": "hard",
+      "domain": "medical",
+      "domain_label": "Medical",
+      "type": "near_synonym",
+      "question": "On a prescription, “Side effects” is:",
+      "options": [
+        "المضاعفات",
+        "التفاعلات الدوائية",
+        "الأعراض",
+        "الآثار الجانبية"
+      ],
+      "answer_index": 3,
+      "answer": "الآثار الجانبية",
+      "explanation": "Side effects of a drug = الآثار الجانبية. المضاعفات are complications of a disease; التفاعلات الدوائية are drug interactions."
+    },
+    {
+      "id": "Q03750",
+      "level": "hard",
+      "domain": "medical",
+      "domain_label": "Medical",
+      "type": "near_synonym",
+      "question": "The formal MSA term for a doctor’s “prescription” is:",
+      "options": [
+        "روشتة",
+        "نشرة دوائية",
+        "تقرير طبي",
+        "وصفة طبية"
+      ],
+      "answer_index": 3,
+      "answer": "وصفة طبية",
+      "explanation": "وصفة طبية is the formal term. روشتة is colloquial; نشرة دوائية is the package leaflet; تقرير طبي is a medical report."
+    },
+    {
+      "id": "Q03751",
+      "level": "hard",
+      "domain": "medical",
+      "domain_label": "Medical",
+      "type": "register",
+      "question": "A sick-leave note: “The above patient is advised rest for three days.” Register-appropriate:",
+      "options": [
+        "المريض اللي فوق لازم يرتاح ثلاث أيام.",
+        "ننصح هذا المريض أن ينام ثلاثة أيام.",
+        "المريض أعلاه يستحق إجازة ثلاثة أيام.",
+        "يُنصح المريض المذكور أعلاه بالراحة لمدة ثلاثة أيام."
+      ],
+      "answer_index": 3,
+      "answer": "يُنصح المريض المذكور أعلاه بالراحة لمدة ثلاثة أيام.",
+      "explanation": "Medical certificates use impersonal formal wording: «يُنصح المريض المذكور أعلاه بالراحة لمدة …»."
+    },
+    {
+      "id": "Q03752",
+      "level": "hard",
+      "domain": "medical",
+      "domain_label": "Medical",
+      "type": "register",
+      "question": "A hospital notice: “Masks are mandatory inside the hospital premises.” Best:",
+      "options": [
+        "يجب ارتداء الكمامات داخل مرافق المستشفى.",
+        "يُفضَّل ارتداء الكمامات داخل المستشفى.",
+        "لازم تلبس كمامة جوّا المستشفى.",
+        "الأقنعة إجبارية في عمارة المستشفى."
+      ],
+      "answer_index": 0,
+      "answer": "يجب ارتداء الكمامات داخل مرافق المستشفى.",
+      "explanation": "“Mandatory” = يجب / إلزامي. يُفضَّل (preferable) weakens the rule; the others are colloquial or mistranslate “masks” and “premises”."
+    },
+    {
+      "id": "Q03753",
+      "level": "hard",
+      "domain": "medical",
+      "domain_label": "Medical",
+      "type": "register",
+      "question": "A medical fitness certificate: “The candidate is medically fit to work.” Best:",
+      "options": [
+        "المرشّح فِت للشغل.",
+        "المرشّح لائق طبيًا للعمل.",
+        "المرشّح مناسب جسمه للعمل.",
+        "المرشّح قادر على العمل جزئيًا."
+      ],
+      "answer_index": 1,
+      "answer": "المرشّح لائق طبيًا للعمل.",
+      "explanation": "Fitness certificates use لائق طبيًا (صحيًا). Option 4 changes the meaning; the others are colloquial."
+    },
+    {
+      "id": "Q03754",
+      "level": "hard",
+      "domain": "medical",
+      "domain_label": "Medical",
+      "type": "register",
+      "question": "A hospital notice: “Emergency patients will be given priority; your patience is appreciated.” Best:",
+      "options": [
+        "المرضى الطارئين أولاً، صبركم مقدَّر.",
+        "تُعطى الأولوية لحالات الطوارئ، ونشكر لكم صبركم.",
+        "الحالات الطارئة لها الأولوية فاصبروا علينا شوية.",
+        "حالات الطوارئ تأخذ الدور، ونطلب منكم الانتظار الطويل."
+      ],
+      "answer_index": 1,
+      "answer": "تُعطى الأولوية لحالات الطوارئ، ونشكر لكم صبركم.",
+      "explanation": "Polite institutional wording: «تُعطى الأولوية لحالات الطوارئ، ونشكر لكم صبركم». The others are calqued, colloquial, or change the message."
+    },
+    {
+      "id": "Q03755",
+      "level": "hard",
+      "domain": "education",
+      "domain_label": "Education / Academic",
+      "type": "best_translation",
+      "question": "Best rendering of: «This is to certify that Mr. Ali has successfully completed the requirements for the degree of Bachelor of Science.»",
+      "options": [
+        "هذا يشهد أن السيد علي أكمل بنجاح طلبات شهادة بكالوريوس العلم.",
+        "نشهد بأن السيد علي قد أتمّ بنجاح متطلبات الحصول على درجة البكالوريوس في العلوم.",
+        "نشهد بأن السيد علي قد بدأ متطلبات درجة البكالوريوس في العلوم.",
+        "نشهد بأن السيد علي قد أتمّ بنجاح متطلبات درجة الماجستير في العلوم."
+      ],
+      "answer_index": 1,
+      "answer": "نشهد بأن السيد علي قد أتمّ بنجاح متطلبات الحصول على درجة البكالوريوس في العلوم.",
+      "explanation": "Degree certificates use «نشهد بأن … قد أتمّ بنجاح متطلبات …». Option 2 says “started”; option 3 changes the degree."
+    },
+    {
+      "id": "Q03756",
+      "level": "hard",
+      "domain": "education",
+      "domain_label": "Education / Academic",
+      "type": "best_translation",
+      "question": "On a transcript, “Cumulative GPA: 3.6 / 4.0” is:",
+      "options": [
+        "المعدل الفصلي: 3.6 من 4.0",
+        "المجموع الكلي: 3.6 من 4.0",
+        "المعدل التراكمي: 3.6 من 4.0",
+        "النسبة المئوية: 3.6 من 4.0"
+      ],
+      "answer_index": 2,
+      "answer": "المعدل التراكمي: 3.6 من 4.0",
+      "explanation": "Cumulative GPA = المعدل التراكمي (across all terms); المعدل الفصلي is the semester GPA."
+    },
+    {
+      "id": "Q03757",
+      "level": "hard",
+      "domain": "education",
+      "domain_label": "Education / Academic",
+      "type": "best_translation",
+      "question": "Best rendering of: «The medium of instruction was English.»",
+      "options": [
+        "كان متوسط التعليم إنجليزيًا.",
+        "كانت وسيلة التعليم الإنجليزية.",
+        "كانت المادة الدراسية هي الإنجليزية.",
+        "كانت لغة التدريس الإنجليزية."
+      ],
+      "answer_index": 3,
+      "answer": "كانت لغة التدريس الإنجليزية.",
+      "explanation": "“Medium of instruction” = لغة التدريس. متوسط reads “medium” as average; option 3 makes English a subject instead."
+    },
+    {
+      "id": "Q03758",
+      "level": "hard",
+      "domain": "education",
+      "domain_label": "Education / Academic",
+      "type": "best_translation",
+      "question": "Best English rendering of: «معادلة الشهادة»",
+      "options": [
+        "Certificate equation",
+        "Balancing the certificate",
+        "Equivalency of the certificate",
+        "Certificate renewal"
+      ],
+      "answer_index": 2,
+      "answer": "Equivalency of the certificate",
+      "explanation": "معادلة الشهادة is the recognition of a foreign qualification as equivalent to a local one: “(credential) equivalency”."
+    },
+    {
+      "id": "Q03759",
+      "level": "hard",
+      "domain": "education",
+      "domain_label": "Education / Academic",
+      "type": "best_translation",
+      "question": "An Indian university issues a “Provisional Certificate” until the degree is conferred. Best:",
+      "options": [
+        "شهادة إقليمية",
+        "شهادة احتياطية",
+        "شهادة نهائية",
+        "شهادة مؤقتة"
+      ],
+      "answer_index": 3,
+      "answer": "شهادة مؤقتة",
+      "explanation": "Provisional = مؤقتة (valid until the final degree certificate). إقليمية confuses it with “provincial”."
+    },
+    {
+      "id": "Q03760",
+      "level": "hard",
+      "domain": "education",
+      "domain_label": "Education / Academic",
+      "type": "best_translation",
+      "question": "An Indian “Mark Sheet” is best rendered:",
+      "options": [
+        "ورقة العلامات التجارية",
+        "ورقة الإشارات",
+        "شهادة التخرج",
+        "كشف الدرجات"
+      ],
+      "answer_index": 3,
+      "answer": "كشف الدرجات",
+      "explanation": "A mark sheet lists subject marks: كشف الدرجات (كشف العلامات). It is not the degree certificate."
+    },
+    {
+      "id": "Q03761",
+      "level": "hard",
+      "domain": "education",
+      "domain_label": "Education / Academic",
+      "type": "best_translation",
+      "question": "Best rendering of: «Admission is subject to verification of original documents.»",
+      "options": [
+        "القبول موضوع للتحقق من الوثائق الأصلية.",
+        "يخضع الاعتراف للتحقق من الوثائق الأصلية.",
+        "يتم القبول بعد إتلاف الوثائق الأصلية.",
+        "يخضع القبول للتحقق من الوثائق الأصلية."
+      ],
+      "answer_index": 3,
+      "answer": "يخضع القبول للتحقق من الوثائق الأصلية.",
+      "explanation": "“Subject to” = يخضع لـ (not موضوع). Admission to a university = القبول, not الاعتراف (confession)."
+    },
+    {
+      "id": "Q03762",
+      "level": "hard",
+      "domain": "education",
+      "domain_label": "Education / Academic",
+      "type": "error_spotting",
+      "question": "“Bachelor of Arts (B.A.)” is drafted «بكالوريوس الفنون». What is wrong?",
+      "options": [
+        "No error",
+        "It should be «ليسانس العلوم»",
+        "B.A. is «بكالوريوس الآداب»; «الفنون» is Fine Arts",
+        "«بكالوريوس» should be «دبلوم»"
+      ],
+      "answer_index": 2,
+      "answer": "B.A. is «بكالوريوس الآداب»; «الفنون» is Fine Arts",
+      "explanation": "Arts (humanities) degree = بكالوريوس الآداب. بكالوريوس الفنون (الجميلة) is a BFA — a different qualification."
+    },
+    {
+      "id": "Q03763",
+      "level": "hard",
+      "domain": "education",
+      "domain_label": "Education / Academic",
+      "type": "error_spotting",
+      "question": "On a transcript, “Semester 3” is drafted «السنة الدراسية الثالثة». The error:",
+      "options": [
+        "No error",
+        "«الثالثة» should be «الثالث»",
+        "A semester is «الفصل الدراسي», not an academic year",
+        "«الدراسية» must be deleted"
+      ],
+      "answer_index": 2,
+      "answer": "A semester is «الفصل الدراسي», not an academic year",
+      "explanation": "Semester = الفصل الدراسي; academic year = السنة الدراسية. Semester 3 falls in the second year."
+    },
+    {
+      "id": "Q03764",
+      "level": "hard",
+      "domain": "education",
+      "domain_label": "Education / Academic",
+      "type": "error_spotting",
+      "question": "The result “Pass” is drafted «ناجح بامتياز». The error:",
+      "options": [
+        "No error",
+        "«ناجح» should be «مقبول» always",
+        "It should be «راسب»",
+        "It adds a distinction the source does not state; it should be «ناجح»"
+      ],
+      "answer_index": 3,
+      "answer": "It adds a distinction the source does not state; it should be «ناجح»",
+      "explanation": "A translator must not upgrade a result. “Pass” = ناجح; بامتياز means “with distinction”."
+    },
+    {
+      "id": "Q03765",
+      "level": "hard",
+      "domain": "education",
+      "domain_label": "Education / Academic",
+      "type": "error_spotting",
+      "question": "“Dean of Student Affairs” is drafted «عميد شؤون الطلاب». Is there an error?",
+      "options": [
+        "«عميد» should be «مدير»",
+        "No error — this is correct",
+        "«شؤون» should be «أمور»",
+        "It should be «رئيس الطلبة»"
+      ],
+      "answer_index": 1,
+      "answer": "No error — this is correct",
+      "explanation": "«عميد شؤون الطلاب» is the established title. Not every draft contains an error."
+    },
+    {
+      "id": "Q03766",
+      "level": "hard",
+      "domain": "education",
+      "domain_label": "Education / Academic",
+      "type": "error_spotting",
+      "question": "On an Indian exam certificate, “Roll No.: 452318” is drafted «رقم اللفة: 452318». The error:",
+      "options": [
+        "“Roll number” is the candidate’s number: «رقم الجلوس»",
+        "No error",
+        "It should be «رقم الدور»",
+        "The number must be reversed"
+      ],
+      "answer_index": 0,
+      "answer": "“Roll number” is the candidate’s number: «رقم الجلوس»",
+      "explanation": "Roll No. on exam documents = رقم الجلوس (examination number). «اللفة» translates “roll” literally."
+    },
+    {
+      "id": "Q03767",
+      "level": "hard",
+      "domain": "education",
+      "domain_label": "Education / Academic",
+      "type": "false_friend",
+      "question": "An Indian school leaving certificate states “Conduct: Good”. Here “conduct” is:",
+      "options": [
+        "الإدارة",
+        "السلوك",
+        "القيادة",
+        "التوصيل"
+      ],
+      "answer_index": 1,
+      "answer": "السلوك",
+      "explanation": "Conduct on a school certificate = السلوك (behaviour). The verb meanings (to manage, to lead) do not apply."
+    },
+    {
+      "id": "Q03768",
+      "level": "hard",
+      "domain": "education",
+      "domain_label": "Education / Academic",
+      "type": "false_friend",
+      "question": "A school certificate is “signed by the Principal”. “Principal” here is:",
+      "options": [
+        "الرئيسي",
+        "المبلغ الأصلي",
+        "الأستاذ الأول",
+        "مدير المدرسة"
+      ],
+      "answer_index": 3,
+      "answer": "مدير المدرسة",
+      "explanation": "The head of a school = مدير المدرسة. “Principal” also means main (رئيسي) or the original sum of a loan (أصل المبلغ) — not here."
+    },
+    {
+      "id": "Q03769",
+      "level": "hard",
+      "domain": "education",
+      "domain_label": "Education / Academic",
+      "type": "false_friend",
+      "question": "An Indian college notice: “Tuition fees are non-refundable.” Here “tuition fees” is:",
+      "options": [
+        "رسوم الدروس الخصوصية",
+        "رسوم الامتحانات",
+        "رسوم السكن",
+        "الرسوم الدراسية"
+      ],
+      "answer_index": 3,
+      "answer": "الرسوم الدراسية",
+      "explanation": "Tuition fees = الرسوم الدراسية. In Indian English “tuition” alone often means private coaching (دروس خصوصية) — context decides."
+    },
+    {
+      "id": "Q03770",
+      "level": "hard",
+      "domain": "education",
+      "domain_label": "Education / Academic",
+      "type": "near_synonym",
+      "question": "On an Indian degree certificate, “Vice-Chancellor” (the university’s chief executive) is best:",
+      "options": [
+        "نائب رئيس الجامعة",
+        "رئيس الجامعة",
+        "عميد الكلية",
+        "مستشار الجامعة"
+      ],
+      "answer_index": 1,
+      "answer": "رئيس الجامعة",
+      "explanation": "In Indian/UK universities the Vice-Chancellor runs the university: رئيس (مدير) الجامعة. The literal «نائب رئيس» understates the office."
+    },
+    {
+      "id": "Q03771",
+      "level": "hard",
+      "domain": "education",
+      "domain_label": "Education / Academic",
+      "type": "near_synonym",
+      "question": "For a medical graduate, the “compulsory rotating internship” is:",
+      "options": [
+        "سنة الامتياز",
+        "التدريب الصيفي",
+        "فترة التجربة",
+        "الإقامة الطبية (الزمالة)"
+      ],
+      "answer_index": 0,
+      "answer": "سنة الامتياز",
+      "explanation": "The compulsory post-MBBS internship = سنة الامتياز. Residency (الإقامة / الزمالة) is postgraduate specialty training."
+    },
+    {
+      "id": "Q03772",
+      "level": "hard",
+      "domain": "education",
+      "domain_label": "Education / Academic",
+      "type": "near_synonym",
+      "question": "“Undergraduate student” is:",
+      "options": [
+        "طالب في مرحلة البكالوريوس",
+        "طالب غير متخرج من المدرسة",
+        "طالب في المرحلة الثانوية",
+        "طالب دراسات عليا"
+      ],
+      "answer_index": 0,
+      "answer": "طالب في مرحلة البكالوريوس",
+      "explanation": "Undergraduate = studying for a first degree (مرحلة البكالوريوس / المرحلة الجامعية الأولى)."
+    },
+    {
+      "id": "Q03773",
+      "level": "hard",
+      "domain": "education",
+      "domain_label": "Education / Academic",
+      "type": "near_synonym",
+      "question": "On a transcript, “Elective course” is:",
+      "options": [
+        "مقرر إجباري",
+        "مقرر اختياري",
+        "مقرر انتخابي",
+        "مقرر تمهيدي"
+      ],
+      "answer_index": 1,
+      "answer": "مقرر اختياري",
+      "explanation": "Elective = اختياري (chosen by the student); compulsory = إجباري. انتخابي relates to elections."
+    },
+    {
+      "id": "Q03774",
+      "level": "hard",
+      "domain": "education",
+      "domain_label": "Education / Academic",
+      "type": "register",
+      "question": "A transcript is “duly signed and stamped”. Best:",
+      "options": [
+        "موقّع ومختوم حسب الأصول",
+        "فيه توقيع وختم",
+        "موقّع ومطبوع بشكل واجب",
+        "تمّ توقيعه ووضع طابع بريدي عليه"
+      ],
+      "answer_index": 0,
+      "answer": "موقّع ومختوم حسب الأصول",
+      "explanation": "“Duly” = حسب الأصول (in the proper manner). Stamped (with a seal) = مختوم, not a postage stamp."
+    },
+    {
+      "id": "Q03775",
+      "level": "hard",
+      "domain": "education",
+      "domain_label": "Education / Academic",
+      "type": "register",
+      "question": "An admission letter: “Congratulations! You have been offered admission to the programme.” Best:",
+      "options": [
+        "تهانينا! يسرّنا إبلاغكم بقبولكم في البرنامج.",
+        "مبروك! انعرض عليك دخول البرنامج.",
+        "تهانينا! قدّمنا لك عرض الدخول إلى البرنامج.",
+        "مبارك، تمّ إدخالك للبرنامج."
+      ],
+      "answer_index": 0,
+      "answer": "تهانينا! يسرّنا إبلاغكم بقبولكم في البرنامج.",
+      "explanation": "Formal admission letters use «يسرّنا إبلاغكم بقبولكم في …». The others are literal or colloquial."
+    },
+    {
+      "id": "Q03776",
+      "level": "hard",
+      "domain": "business",
+      "domain_label": "Business / Commercial",
+      "type": "best_translation",
+      "question": "Best rendering of: «Payment is due within 30 days of the invoice date.»",
+      "options": [
+        "الدفع بسبب 30 يومًا من تاريخ الفاتورة.",
+        "يُستحق السداد بعد 30 يومًا من تاريخ الطلب.",
+        "يُستحق السداد خلال 30 يومًا من تاريخ الفاتورة.",
+        "يجب الدفع قبل تاريخ الفاتورة بـ30 يومًا."
+      ],
+      "answer_index": 2,
+      "answer": "يُستحق السداد خلال 30 يومًا من تاريخ الفاتورة.",
+      "explanation": "“Due” = يُستحق (not بسبب, “due to”). The period runs from the invoice date; options 2 and 3 change it."
+    },
+    {
+      "id": "Q03777",
+      "level": "hard",
+      "domain": "business",
+      "domain_label": "Business / Commercial",
+      "type": "best_translation",
+      "question": "Best rendering of: «The employee shall serve a probation period of three months.»",
+      "options": [
+        "يخضع الموظف لفترة مراقبة قضائية مدتها ثلاثة أشهر.",
+        "يقضي الموظف فترة إشعار مدتها ثلاثة أشهر.",
+        "يخضع الموظف لفترة تجربة مدتها ثلاثة أشهر.",
+        "يخضع الموظف لفترة تدريب مدتها ثلاث سنوات."
+      ],
+      "answer_index": 2,
+      "answer": "يخضع الموظف لفترة تجربة مدتها ثلاثة أشهر.",
+      "explanation": "In employment “probation” = فترة التجربة. المراقبة القضائية is criminal probation; فترة الإشعار is the notice period."
+    },
+    {
+      "id": "Q03778",
+      "level": "hard",
+      "domain": "business",
+      "domain_label": "Business / Commercial",
+      "type": "best_translation",
+      "question": "Best rendering of: «Either party may terminate this agreement by giving one month’s written notice.»",
+      "options": [
+        "يجب على الطرفين معًا إنهاء هذه الاتفاقية بإشعار خطي مدته شهر.",
+        "يمكن لأحد الحزبين إلغاء الاتفاق بملاحظة مكتوبة لشهر.",
+        "يجوز لأيٍّ من الطرفين إنهاء هذه الاتفاقية بموجب إشعار خطي مدته شهر.",
+        "يجوز لأيٍّ من الطرفين تجديد هذه الاتفاقية بإشعار شفهي مدته شهر."
+      ],
+      "answer_index": 2,
+      "answer": "يجوز لأيٍّ من الطرفين إنهاء هذه الاتفاقية بموجب إشعار خطي مدته شهر.",
+      "explanation": "“Either party may” = يجوز لأيٍّ من الطرفين (a right, not a duty). Notice = إشعار, not ملاحظة; written = خطي."
+    },
+    {
+      "id": "Q03779",
+      "level": "hard",
+      "domain": "business",
+      "domain_label": "Business / Commercial",
+      "type": "best_translation",
+      "question": "Best English rendering of: «الأسعار شاملة ضريبة القيمة المضافة»",
+      "options": [
+        "Prices exclude VAT.",
+        "Prices are inclusive of VAT.",
+        "Prices are comprehensive of added value tax.",
+        "VAT is charged separately on these prices."
+      ],
+      "answer_index": 1,
+      "answer": "Prices are inclusive of VAT.",
+      "explanation": "شاملة = inclusive of. Options 1 and 3 state the opposite; option 2 is a literal calque."
+    },
+    {
+      "id": "Q03780",
+      "level": "hard",
+      "domain": "business",
+      "domain_label": "Business / Commercial",
+      "type": "best_translation",
+      "question": "An Indian invoice note: «Goods once sold will not be taken back or exchanged.» Best:",
+      "options": [
+        "البضائع لن تُؤخذ مرة أخرى بعد بيعها مرة.",
+        "البضاعة المباعة تُرد خلال 7 أيام.",
+        "لا تُباع البضاعة ولا تُستبدل.",
+        "البضاعة المباعة لا تُرد ولا تُستبدل."
+      ],
+      "answer_index": 3,
+      "answer": "البضاعة المباعة لا تُرد ولا تُستبدل.",
+      "explanation": "«البضاعة المباعة لا تُرد ولا تُستبدل» is the established shop formula."
+    },
+    {
+      "id": "Q03781",
+      "level": "hard",
+      "domain": "business",
+      "domain_label": "Business / Commercial",
+      "type": "best_translation",
+      "question": "“Limited Liability Company (LLC)” is:",
+      "options": [
+        "شركة محدودة الالتزام",
+        "شركة ذات مسؤولية محدودة",
+        "شركة مسؤولة بشكل محدود",
+        "شركة مساهمة عامة"
+      ],
+      "answer_index": 1,
+      "answer": "شركة ذات مسؤولية محدودة",
+      "explanation": "LLC = شركة ذات مسؤولية محدودة (ذ.م.م). A public joint-stock company (شركة مساهمة عامة) is a different legal form."
+    },
+    {
+      "id": "Q03782",
+      "level": "hard",
+      "domain": "business",
+      "domain_label": "Business / Commercial",
+      "type": "best_translation",
+      "question": "A salary certificate: «He draws a monthly salary of AED 8,000.» Best:",
+      "options": [
+        "يرسم راتبًا شهريًا قدره 8,000 درهم.",
+        "يتقاضى راتبًا شهريًا قدره 8,000 درهم.",
+        "يتقاضى راتبًا سنويًا قدره 8,000 درهم.",
+        "يسحب 8,000 درهم من راتبه كل شهر."
+      ],
+      "answer_index": 1,
+      "answer": "يتقاضى راتبًا شهريًا قدره 8,000 درهم.",
+      "explanation": "“Draws a salary” = يتقاضى راتبًا. يرسم (draws a picture) is a false friend; the other options change the period or the meaning."
+    },
+    {
+      "id": "Q03783",
+      "level": "hard",
+      "domain": "business",
+      "domain_label": "Business / Commercial",
+      "type": "error_spotting",
+      "question": "On an invoice, “Net amount” is drafted «المبلغ الإجمالي». The error:",
+      "options": [
+        "Net is «الصافي»; «الإجمالي» is the gross/total",
+        "No error",
+        "It should be «المبلغ النهائي»",
+        "«المبلغ» should be «القيمة»"
+      ],
+      "answer_index": 0,
+      "answer": "Net is «الصافي»; «الإجمالي» is the gross/total",
+      "explanation": "Net (after deductions) = الصافي; gross = الإجمالي. Mixing them changes the figure the reader relies on."
+    },
+    {
+      "id": "Q03784",
+      "level": "hard",
+      "domain": "business",
+      "domain_label": "Business / Commercial",
+      "type": "error_spotting",
+      "question": "“Debit note” is drafted «إشعار دائن». The error:",
+      "options": [
+        "A debit note is «إشعار مدين»; «إشعار دائن» is a credit note",
+        "No error",
+        "It should be «فاتورة»",
+        "It should be «سند قبض»"
+      ],
+      "answer_index": 0,
+      "answer": "A debit note is «إشعار مدين»; «إشعار دائن» is a credit note",
+      "explanation": "Debit = مدين; credit = دائن. Swapping them reverses the accounting entry."
+    },
+    {
+      "id": "Q03785",
+      "level": "hard",
+      "domain": "business",
+      "domain_label": "Business / Commercial",
+      "type": "error_spotting",
+      "question": "“Authorised signatory” is drafted «المفوَّض بالتوقيع». Is there an error?",
+      "options": [
+        "It should be «الموقّع الإجباري»",
+        "It should be «صاحب الختم»",
+        "No error — this is correct",
+        "It should be «المدير العام» always"
+      ],
+      "answer_index": 2,
+      "answer": "No error — this is correct",
+      "explanation": "«المفوَّض بالتوقيع» (or «المخوَّل بالتوقيع») is the correct rendering. Not every draft contains an error."
+    },
+    {
+      "id": "Q03786",
+      "level": "hard",
+      "domain": "business",
+      "domain_label": "Business / Commercial",
+      "type": "error_spotting",
+      "question": "A loan agreement: “Interest at 5% per annum” is drafted «فائدة بنسبة 5% شهريًا». The error:",
+      "options": [
+        "No error",
+        "«فائدة» should be «ربح»",
+        "“Per annum” is «سنويًا», not «شهريًا»",
+        "5% must be written in words"
+      ],
+      "answer_index": 2,
+      "answer": "“Per annum” is «سنويًا», not «شهريًا»",
+      "explanation": "Per annum = سنويًا. 5% a month would be about 60% a year — a serious financial error."
+    },
+    {
+      "id": "Q03787",
+      "level": "hard",
+      "domain": "business",
+      "domain_label": "Business / Commercial",
+      "type": "error_spotting",
+      "question": "An annual report mentions “shareholders”. The draft writes «أصحاب المصلحة». The error:",
+      "options": [
+        "No error",
+        "It should be «الشركاء الإستراتيجيون»",
+        "Shareholders are «المساهمون»; «أصحاب المصلحة» are stakeholders",
+        "It should be «المستثمرون الأجانب»"
+      ],
+      "answer_index": 2,
+      "answer": "Shareholders are «المساهمون»; «أصحاب المصلحة» are stakeholders",
+      "explanation": "Shareholders = المساهمون (owners of shares). Stakeholders (أصحاب المصلحة) is a wider group that includes staff, customers and suppliers."
+    },
+    {
+      "id": "Q03788",
+      "level": "hard",
+      "domain": "business",
+      "domain_label": "Business / Commercial",
+      "type": "false_friend",
+      "question": "“The company posted a net loss for the year.” Here “posted” means:",
+      "options": [
+        "سجّلت (حقّقت)",
+        "أرسلت بالبريد",
+        "نشرت على الإنترنت",
+        "تجنّبت"
+      ],
+      "answer_index": 0,
+      "answer": "سجّلت (حقّقت)",
+      "explanation": "In financial reporting “to post a loss/profit” = سجّل / حقّق خسارة أو ربحًا."
+    },
+    {
+      "id": "Q03789",
+      "level": "hard",
+      "domain": "business",
+      "domain_label": "Business / Commercial",
+      "type": "false_friend",
+      "question": "“Please pay the balance on delivery.” Here “balance” is:",
+      "options": [
+        "الميزان",
+        "التوازن",
+        "المبلغ المتبقي",
+        "رصيد الحساب البنكي"
+      ],
+      "answer_index": 2,
+      "answer": "المبلغ المتبقي",
+      "explanation": "The balance due = المبلغ المتبقي (الباقي) after a deposit. It is not a scale (ميزان) or a bank balance (رصيد) in this sentence."
+    },
+    {
+      "id": "Q03790",
+      "level": "hard",
+      "domain": "business",
+      "domain_label": "Business / Commercial",
+      "type": "false_friend",
+      "question": "“Goodwill” on a company balance sheet is:",
+      "options": [
+        "الشهرة التجارية",
+        "النية الحسنة",
+        "حسن السلوك",
+        "التبرعات الخيرية"
+      ],
+      "answer_index": 0,
+      "answer": "الشهرة التجارية",
+      "explanation": "In accounting, goodwill = الشهرة (التجارية), an intangible asset. Literal “good will” (نية حسنة) is a false friend."
+    },
+    {
+      "id": "Q03791",
+      "level": "hard",
+      "domain": "business",
+      "domain_label": "Business / Commercial",
+      "type": "false_friend",
+      "question": "“The cheque bounced.” Here “bounced” means:",
+      "options": [
+        "قفز الشيك",
+        "صُرف الشيك بنجاح",
+        "أُعيد الشيك إلى المرسِل بالبريد",
+        "رُفض الشيك (لعدم كفاية الرصيد)"
+      ],
+      "answer_index": 3,
+      "answer": "رُفض الشيك (لعدم كفاية الرصيد)",
+      "explanation": "A bounced cheque = شيك مرتجع / رُفض لعدم كفاية الرصيد. Option 2 is the opposite."
+    },
+    {
+      "id": "Q03792",
+      "level": "hard",
+      "domain": "business",
+      "domain_label": "Business / Commercial",
+      "type": "near_synonym",
+      "question": "“Receipt” (proof that payment was made) is:",
+      "options": [
+        "فاتورة",
+        "عرض سعر",
+        "إيصال",
+        "أمر شراء"
+      ],
+      "answer_index": 2,
+      "answer": "إيصال",
+      "explanation": "A receipt (إيصال / سند قبض) confirms payment; an invoice (فاتورة) requests it."
+    },
+    {
+      "id": "Q03793",
+      "level": "hard",
+      "domain": "business",
+      "domain_label": "Business / Commercial",
+      "type": "near_synonym",
+      "question": "A supplier sends a “Quotation”. This is:",
+      "options": [
+        "عرض سعر",
+        "اقتباس",
+        "فاتورة",
+        "أمر توريد"
+      ],
+      "answer_index": 0,
+      "answer": "عرض سعر",
+      "explanation": "A price quotation = عرض سعر. اقتباس is a quotation from a text."
+    },
+    {
+      "id": "Q03794",
+      "level": "hard",
+      "domain": "business",
+      "domain_label": "Business / Commercial",
+      "type": "register",
+      "question": "A promotion ends: “Terms and conditions apply.” Best:",
+      "options": [
+        "الأحوال والكلمات تنطبق.",
+        "فيه شروط.",
+        "تُطبَّق الشروط والأحكام.",
+        "الشروط والظروف مطبّقة."
+      ],
+      "answer_index": 2,
+      "answer": "تُطبَّق الشروط والأحكام.",
+      "explanation": "«تُطبَّق الشروط والأحكام» is the established phrase. “Conditions” here = الأحكام, not الظروف (circumstances)."
+    },
+    {
+      "id": "Q03795",
+      "level": "hard",
+      "domain": "legal",
+      "domain_label": "Legal / Court",
+      "type": "false_friend",
+      "question": "“The judge reserved judgment.” Here “reserved judgment” means:",
+      "options": [
+        "احتفظ القاضي بالحكم سرًّا لنفسه",
+        "حجز القاضي مقعدًا في قاعة الحكم",
+        "أرجأ القاضي النطق بالحكم إلى جلسة لاحقة",
+        "أصدر القاضي حكمه في الحال"
+      ],
+      "answer_index": 2,
+      "answer": "أرجأ القاضي النطق بالحكم إلى جلسة لاحقة",
+      "explanation": "To reserve judgment = to postpone the decision to a later date (أرجأ النطق بالحكم; also «حُجزت الدعوى للحكم»). It is not keeping it secret or booking a seat."
+    },
+    {
+      "id": "Q03796",
+      "level": "hard",
+      "domain": "legal",
+      "domain_label": "Legal / Court",
+      "type": "error_spotting",
+      "question": "“The hearing was adjourned to 5 March” is drafted «أُلغيت الجلسة إلى 5 مارس». What is wrong?",
+      "options": [
+        "No error",
+        "«الجلسة» should be «المحاكمة»",
+        "«مارس» should be «آذار»",
+        "Adjourned means postponed: «أُجِّلت الجلسة إلى 5 مارس»"
+      ],
+      "answer_index": 3,
+      "answer": "Adjourned means postponed: «أُجِّلت الجلسة إلى 5 مارس»",
+      "explanation": "Adjourned = أُجِّلت (moved to a later date). أُلغيت means cancelled, which changes the legal position."
+    },
+    {
+      "id": "Q03797",
+      "level": "hard",
+      "domain": "civil",
+      "domain_label": "Civil & Official Documents",
+      "type": "best_translation",
+      "question": "On an ID document, “Valid until 31/12/2030” is:",
+      "options": [
+        "صدر في 31/12/2030",
+        "صالح حتى 31/12/2030",
+        "ساري المفعول اعتبارًا من 31/12/2030",
+        "يُجدَّد قبل 31/12/2030"
+      ],
+      "answer_index": 1,
+      "answer": "صالح حتى 31/12/2030",
+      "explanation": "“Valid until” = صالح (ساري المفعول) حتى — the expiry date. The other options turn it into the issue date, a start date, or a renewal deadline."
+    },
+    {
+      "id": "Q03798",
+      "level": "hard",
+      "domain": "civil",
+      "domain_label": "Civil & Official Documents",
+      "type": "best_translation",
+      "question": "A translator’s certificate: «Certified that this is a true translation of the original document in Gujarati.» Best:",
+      "options": [
+        "نشهد بأن هذه هي الوثيقة الأصلية المحرَّرة باللغة الغوجاراتية.",
+        "نشهد بأن هذه ترجمة مختصرة للوثيقة الأصلية المحرَّرة باللغة الغوجاراتية.",
+        "نشهد بأن هذه ترجمة مطابقة للوثيقة الأصلية المحرَّرة باللغة الغوجاراتية.",
+        "هذه ترجمة حقيقية للأصل الغوجاراتي وصادقة."
+      ],
+      "answer_index": 2,
+      "answer": "نشهد بأن هذه ترجمة مطابقة للوثيقة الأصلية المحرَّرة باللغة الغوجاراتية.",
+      "explanation": "The translator certifies that the translation matches (مطابقة) the original. Option 1 claims it is the original; option 2 admits it is abridged."
+    },
+    {
+      "id": "Q03799",
+      "level": "hard",
+      "domain": "civil",
+      "domain_label": "Civil & Official Documents",
+      "type": "error_spotting",
+      "question": "A birth certificate gives “Place of birth: Rose Mary Clinic, Vastrapur”. The draft writes «عيادة الوردة مريم، فاسترابور». What is wrong?",
+      "options": [
+        "No error",
+        "The clinic’s name is a proper name and should be transliterated: «عيادة روز ماري»",
+        "«فاسترابور» should be translated",
+        "«عيادة» should be «مستشفى»"
+      ],
+      "answer_index": 1,
+      "answer": "The clinic’s name is a proper name and should be transliterated: «عيادة روز ماري»",
+      "explanation": "Names of people, places and institutions are transliterated, not translated word by word. The worksheet’s model has «عيادة روز ماري، فاسترابور»."
+    },
+    {
+      "id": "Q03800",
+      "level": "hard",
+      "domain": "civil",
+      "domain_label": "Civil & Official Documents",
+      "type": "near_synonym",
+      "question": "On a passport, “Issuing authority” is:",
+      "options": [
+        "جهة الإصدار",
+        "السلطة المُصدِّرة",
+        "مكان الإصدار",
+        "تاريخ الإصدار"
+      ],
+      "answer_index": 0,
+      "answer": "جهة الإصدار",
+      "explanation": "Issuing authority = جهة (سلطة) الإصدار. المُصدِّرة means exporting; place and date of issue are separate fields."
+    },
+    {
+      "id": "Q03801",
+      "level": "hard",
+      "domain": "medical",
+      "domain_label": "Medical",
+      "type": "error_spotting",
+      "question": "“Loratadine 10 mg, once daily in the morning” is drafted «لوراتادين 10 ملغ، مرة واحدة يوميًا في المساء». The error:",
+      "options": [
+        "No error",
+        "“In the morning” is «في الصباح», not «في المساء» (evening)",
+        "«ملغ» should be «مل»",
+        "«مرة واحدة يوميًا» should be «مرتين يوميًا»"
+      ],
+      "answer_index": 1,
+      "answer": "“In the morning” is «في الصباح», not «في المساء» (evening)",
+      "explanation": "Timing is part of the dose instruction. Morning = الصباح; evening = المساء."
+    },
+    {
+      "id": "Q03802",
+      "level": "hard",
+      "domain": "medical",
+      "domain_label": "Medical",
+      "type": "false_friend",
+      "question": "A lab request reads “Stool test”. Here “stool” is:",
+      "options": [
+        "الكرسي",
+        "المقعد",
+        "الدم",
+        "البراز"
+      ],
+      "answer_index": 3,
+      "answer": "البراز",
+      "explanation": "Stool test = تحليل البراز. The furniture meaning (كرسي/مقعد) does not apply."
+    },
+    {
+      "id": "Q03803",
+      "level": "hard",
+      "domain": "medical",
+      "domain_label": "Medical",
+      "type": "near_synonym",
+      "question": "“Outpatient Department (OPD)” is:",
+      "options": [
+        "قسم التنويم",
+        "قسم الطوارئ",
+        "قسم المرضى المغادرين",
+        "العيادات الخارجية"
+      ],
+      "answer_index": 3,
+      "answer": "العيادات الخارجية",
+      "explanation": "Outpatients are seen without admission: العيادات الخارجية. Inpatient wards = أقسام التنويم."
+    },
+    {
+      "id": "Q03804",
+      "level": "hard",
+      "domain": "medical",
+      "domain_label": "Medical",
+      "type": "best_translation",
+      "question": "Best rendering of the advice: «Complete rest for one week; avoid smoking and spicy foods.»",
+      "options": [
+        "راحة تامة لمدة أسبوع، مع تجنّب التدخين والأطعمة الحارّة.",
+        "راحة جزئية لمدة أسبوع، مع تجنّب التدخين والأطعمة الحارّة.",
+        "راحة تامة لمدة شهر، مع تجنّب التدخين والأطعمة الحارّة.",
+        "راحة كاملة أسبوع، وابعد عن الدخان والأكل المبهّر كثير."
+      ],
+      "answer_index": 0,
+      "answer": "راحة تامة لمدة أسبوع، مع تجنّب التدخين والأطعمة الحارّة.",
+      "explanation": "Complete rest = راحة تامة, for one week; spicy foods = الأطعمة الحارّة. Options 1 and 2 change the instruction; option 3 is colloquial."
+    },
+    {
+      "id": "Q03805",
+      "level": "hard",
+      "domain": "education",
+      "domain_label": "Education / Academic",
+      "type": "false_friend",
+      "question": "On a transcript, “Major: Computer Science” — “Major” is:",
+      "options": [
+        "التخصص الرئيسي",
+        "الرائد",
+        "الأغلبية",
+        "الأكبر سنًّا"
+      ],
+      "answer_index": 0,
+      "answer": "التخصص الرئيسي",
+      "explanation": "An academic major = التخصص (الرئيسي). رائد is the military rank; أغلبية is majority."
+    },
+    {
+      "id": "Q03806",
+      "level": "hard",
+      "domain": "education",
+      "domain_label": "Education / Academic",
+      "type": "false_friend",
+      "question": "“The degree was conferred on 12 June 2024.” Here “conferred” means:",
+      "options": [
+        "تمّت المشاورة بشأنها",
+        "مُنحت",
+        "أُلغيت",
+        "طُلبت"
+      ],
+      "answer_index": 1,
+      "answer": "مُنحت",
+      "explanation": "To confer a degree = منح الدرجة. “Confer with” (تشاور) is a different verb."
+    },
+    {
+      "id": "Q03807",
+      "level": "hard",
+      "domain": "education",
+      "domain_label": "Education / Academic",
+      "type": "best_translation",
+      "question": "An Indian college letter: «This is to certify that Mr. Rahul is a bonafide student of this college.» Best:",
+      "options": [
+        "نشهد بأن السيد راهول طالب حسن النية في هذه الكلية.",
+        "نشهد بأن السيد راهول طالب سابق في هذه الكلية.",
+        "نشهد بأن السيد راهول طالب منتظم في هذه الكلية.",
+        "نشهد بأن السيد راهول طالب زائر في هذه الكلية."
+      ],
+      "answer_index": 2,
+      "answer": "نشهد بأن السيد راهول طالب منتظم في هذه الكلية.",
+      "explanation": "A “bonafide certificate” confirms that the person is a genuine, currently enrolled student: طالب منتظم (مقيَّد). حسن النية translates the Latin literally."
+    },
+    {
+      "id": "Q03808",
+      "level": "hard",
+      "domain": "business",
+      "domain_label": "Business / Commercial",
+      "type": "near_synonym",
+      "question": "A supplier sends a “Proforma invoice” before shipment. This is:",
+      "options": [
+        "فاتورة نهائية",
+        "فاتورة ضريبية",
+        "فاتورة مبدئية",
+        "إيصال استلام"
+      ],
+      "answer_index": 2,
+      "answer": "فاتورة مبدئية",
+      "explanation": "A proforma invoice is a preliminary bill sent before supply: فاتورة مبدئية (أولية). It is not the final or tax invoice."
+    },
+    {
+      "id": "Q03809",
+      "level": "hard",
+      "domain": "business",
+      "domain_label": "Business / Commercial",
+      "type": "near_synonym",
+      "question": "On a balance sheet, “Fixed assets” are:",
+      "options": [
+        "الأصول المتداولة",
+        "الأصول الثابتة",
+        "الأصول المجمَّدة",
+        "الأصول المحدَّدة"
+      ],
+      "answer_index": 1,
+      "answer": "الأصول الثابتة",
+      "explanation": "Fixed (long-term) assets = الأصول الثابتة; current assets = الأصول المتداولة. مجمَّدة means frozen."
+    },
+    {
+      "id": "Q03810",
+      "level": "hard",
+      "domain": "business",
+      "domain_label": "Business / Commercial",
+      "type": "register",
+      "question": "A company letter: “We regret to inform you that your application was not successful.” Best:",
+      "options": [
+        "نأسف لإبلاغكم بأن طلبكم لم يُقبل.",
+        "نندم أن نخبرك إن طلبك فشل.",
+        "للأسف طلبك ما مشي.",
+        "نأسف لإبلاغكم بقبول طلبكم."
+      ],
+      "answer_index": 0,
+      "answer": "نأسف لإبلاغكم بأن طلبكم لم يُقبل.",
+      "explanation": "«نأسف لإبلاغكم بأن …» is the formal formula. Option 4 reverses the message; the others are literal or colloquial."
+    },
+    {
+      "id": "Q03811",
+      "level": "hard",
+      "domain": "business",
+      "domain_label": "Business / Commercial",
+      "type": "register",
+      "question": "A formal letter to an organisation closes with “Yours faithfully”. Best:",
+      "options": [
+        "وتفضّلوا بقبول فائق الاحترام والتقدير.",
+        "المخلص لكم بإيمان.",
+        "صديقك الوفي.",
+        "مع حبي."
+      ],
+      "answer_index": 0,
+      "answer": "وتفضّلوا بقبول فائق الاحترام والتقدير.",
+      "explanation": "Arabic formal letters close with «وتفضّلوا بقبول فائق الاحترام (والتقدير)». “Faithfully” is never translated literally."
+    },
+    {
+      "id": "Q03812",
+      "level": "hard",
+      "domain": "business",
+      "domain_label": "Business / Commercial",
+      "type": "error_spotting",
+      "question": "A quotation says “Delivery within 7 working days”. The draft writes «التسليم خلال 7 أيام». What is wrong?",
+      "options": [
+        "No error",
+        "«التسليم» should be «الشحن»",
+        "7 must be written in words",
+        "“Working” was dropped: it should be «خلال 7 أيام عمل»"
+      ],
+      "answer_index": 3,
+      "answer": "“Working” was dropped: it should be «خلال 7 أيام عمل»",
+      "explanation": "Working days exclude weekends and holidays. Dropping “working” shortens the supplier’s deadline."
     }
   ]
 }
