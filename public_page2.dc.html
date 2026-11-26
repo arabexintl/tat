@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<template id="__bundler_thumbnail">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#f3f2f2"/><circle cx="50" cy="42" r="20" fill="none" stroke="#C1272D" stroke-width="5"/><path d="M40 38h16l-4-4M60 46H44l4 4" fill="none" stroke="#C1272D" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><text x="50" y="82" font-family="Georgia,serif" font-size="16" font-weight="700" text-anchor="middle" fill="#1A1A1A">ARAB<tspan fill="#C1272D">EX</tspan></text></svg>
+</template>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="_ds/nocturne-917fe29e-d065-4294-b674-06348cbefec4/styles.css">
+  <script src="_ds/nocturne-917fe29e-d065-4294-b674-06348cbefec4/_ds_bundle.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/duotone/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet">
+  <style>
+    /* Arabic glyphs render in Amiri everywhere; Latin stays on Inter */
+    @font-face{
+      font-family:'Inter';font-style:normal;font-weight:400;font-display:swap;
+      src:local('Amiri'),url(https://fonts.gstatic.com/s/amiri/v27/J7aRnpd8CGxBHqUpvrIw74NL.woff2) format('woff2');
+      unicode-range:U+0600-06FF,U+0750-077F,U+08A0-08FF,U+FB50-FDFF,U+FE70-FEFF,U+0621-064A;
+    }
+    @font-face{
+      font-family:'Inter';font-style:normal;font-weight:700;font-display:swap;
+      src:local('Amiri Bold'),url(https://fonts.gstatic.com/s/amiri/v27/J7acnpd8CGxBHpUrjAo9zptdHDseYw.woff2) format('woff2');
+      unicode-range:U+0600-06FF,U+0750-077F,U+08A0-08FF,U+FB50-FDFF,U+FE70-FEFF,U+0621-064A;
+    }
+    :root{ --font-ar:'Amiri', serif; }
+    /* Arabex brand — remap the second accent ramp to the logo's crimson.
+       Cyan (--color-accent) is kept strictly for the "correct answer" signal. */
+    :root{
+      /* lighter ground, darker text */
+      --color-bg:#eceef3; --color-surface:#f7f8fb; --color-text:#23252e; --color-divider:#d7dae3;
+      --color-accent-2-100:#fbe9ec; --color-accent-2-200:#f5c6cd; --color-accent-2-300:#eb9aa6;
+      --color-accent-2-400:#dd5f72; --color-accent-2-500:#e11d3c; --color-accent-2-600:#C8102E;
+      --color-accent-2-700:#920c22; --color-accent-2-800:#6f0919; --color-accent-2-900:#490610;
+      --color-accent-2:#C8102E;
+      /* semantic green — correct-answer signal (light fill, dark text) */
+      --ok-100:#e6f4ec; --ok-300:#a8d8bc; --ok-600:#1f9d57; --ok-700:#177a44; --ok-800:#115c33;
+    }
+    *{box-sizing:border-box}
+    body{margin:0}
+    button{font-family:var(--font-body)}
+    ::selection{background:var(--color-accent-2-200)}
+    a{color:var(--color-accent-2-700)}
+    a:hover{color:var(--color-accent-2-800)}
+    .btn-primary{background:var(--color-accent-2-600);border-color:var(--color-accent-2-600);color:#fff}
+    .btn-primary:hover{background:var(--color-accent-2-700);border-color:var(--color-accent-2-700)}
+    .btn-ghost{color:var(--color-accent-2-700)}
+    .btn-secondary{color:var(--color-accent-2-700);border-color:var(--color-accent-2-300)}
+    .btn:focus-visible{outline:2px solid var(--color-accent-2)}
+    .fade{animation:fade .28s ease both}
+    .kbd-hint{display:none}
+    @media (hover:hover) and (min-width:560px){ .kbd-hint{display:block} }
+    @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+    .hero-logo{height:72px;width:auto;max-width:100%}
+    @media (max-width:520px){
+      .hero-logo{height:52px}
+      .dateline{flex-wrap:wrap;gap:2px 14px;font-size:10px!important;letter-spacing:.08em!important}
+      .lede{font-size:17px!important}
+      .config-h2{font-size:24px!important}
+      .qtext{font-size:20px!important}
+      .score-big{font-size:58px!important}
+    }
+    @media (max-width:380px){
+      .hero-logo{height:44px}
+    }
+    @media (max-width:480px){
+      .grid-3{grid-template-columns:1fr!important}
+      .grid-2{grid-template-columns:1fr!important}
+    }
+  </style>
+</helmet>
+
+<div style="min-height:100%;background:var(--color-bg);color:var(--color-text);display:flex;justify-content:center;padding:0 20px 34px">
+  <div style="width:100%;max-width:600px">
+
+    <!-- ============ LANDING ============ -->
+    <sc-if value="{{ isLanding }}" hint-placeholder-val="{{ true }}">
+    <div class="fade" style="padding-top:40px">
+      
+      <div class="dateline" style="border-top:1px solid var(--color-text);border-bottom:1px solid var(--color-text);padding:14px 0;display:flex;justify-content:space-between;align-items:center;gap:16px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--color-neutral-700)">
+        <span style="color:var(--color-text);font-size:20px">Translator Assessment 1.0</span>
+        <img src="assets/arabex-intl.png" alt="Arabex International" style="display:block;height:34px;width:auto;flex:none">
+      </div>
+
+      <p class="lede" style="font-size:19px;line-height:1.55;margin:26px 0 8px;text-wrap:pretty">A calibrated assessment for aspiring English–Arabic translators. {{ totalLabel }} verified questions across five professional domains, graded easy to hard.</p>
+
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:22px 0 28px">
+        <sc-for list="{{ stats }}" as="st" hint-placeholder-count="3">
+          <div style="background:var(--color-surface);border:1px solid var(--color-divider);border-radius:var(--radius-lg);padding:14px 8px;text-align:center">
+            <div style="font-size:24px;font-weight:600;color:var(--color-accent-2-700);font-variant-numeric:tabular-nums;line-height:1.1">{{ st.value }}</div>
+            <div style="font-size:12px;letter-spacing:.06em;color:var(--color-neutral-700);margin-top:4px">{{ st.label }}</div>
+          </div>
+        </sc-for>
+      </div>
+
+      <button class="btn btn-primary btn-block" style="font-size:17px;padding:14px" onClick="{{ quickStart }}">
+        <i class="ph-duotone ph-lightning" style="font-size:19px"></i>&nbsp;Quick start — 10 easy questions
+      </button>
+      <div style="text-align:center;font-size:12px;color:var(--color-neutral-600);margin:8px 0 26px;letter-spacing:.03em">Untimed · all five domains · about 3 minutes</div>
+
+      <div style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--color-neutral-600);margin-bottom:10px">Or choose how to work</div>
+      <div style="display:grid;gap:10px;margin-bottom:14px">
+        <sc-for list="{{ ways }}" as="w" hint-placeholder-count="3">
+          <button type="button" style="{{ w.style }}" style-hover="{{ w.hover }}" onClick="{{ w.onClick }}">
+            <i class="{{ w.icon }}" style="font-size:26px;color:var(--color-accent-2-700);flex:none"></i>
+            <span style="flex:1;text-align:start">
+              <span style="display:block;font-size:16px;font-weight:600">{{ w.title }}</span>
+              <span style="display:block;font-size:13px;line-height:1.45;color:var(--color-neutral-700);margin-top:2px">{{ w.desc }}</span>
+            </span>
+            <i class="ph-duotone ph-caret-right" style="font-size:18px;color:var(--color-neutral-600);flex:none"></i>
+          </button>
+        </sc-for>
+      </div>
+      <button class="btn btn-secondary btn-block" style="font-size:16px;padding:13px" onClick="{{ goProgress }}">
+        <i class="ph-duotone ph-chart-line-up" style="font-size:19px"></i>&nbsp;My progress
+      </button>
+
+      <div style="display:flex;flex-direction:column;gap:2px;margin:30px 0 0">
+        <div style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--color-neutral-600);margin-bottom:6px">What you get</div>
+        <sc-for list="{{ features }}" as="f" hint-placeholder-count="4">
+          <div style="display:flex;align-items:baseline;gap:12px;padding:11px 0;border-top:1px solid var(--color-divider)">
+            <span dir="ltr" style="font-size:12px;letter-spacing:.1em;color:var(--color-accent-2-700);min-width:22px;font-variant-numeric:tabular-nums">{{ f.num }}</span>
+            <span style="flex:1;font-size:15px">{{ f.text }}</span>
+          </div>
+        </sc-for>
+      </div>
+
+      <div style="display:flex;justify-content:center;gap:10px;margin-top:30px;padding-top:18px;border-top:1px solid var(--color-divider)">
+        <button class="btn btn-ghost" style="font-size:13px;padding:8px 12px" onClick="{{ openAbout }}">
+          <i class="ph-duotone ph-info" style="font-size:17px"></i>&nbsp;About us
+        </button>
+        <a class="btn btn-ghost" href="{{ waErrorLink }}" style="font-size:13px;padding:8px 12px;text-decoration:none">
+          <i class="ph-duotone ph-envelope-simple" style="font-size:17px"></i>&nbsp;Report an error
+        </a>
+      </div>
+    </div>
+    </sc-if>
+
+    <!-- ============ SELECT ============ -->
+    <sc-if value="{{ isSelect }}" hint-placeholder-val="{{ false }}">
+    <div class="fade" style="padding-top:26px">
+      <img class="brand-logo" src="assets/arabex-intl.png" alt="Arabex International" style="height:30px;width:auto;display:block;margin-bottom:12px">
+      <button class="btn btn-ghost" style="padding:6px 10px;margin-left:-10px" onClick="{{ goLanding }}">
+        <i class="ph-duotone ph-arrow-left" style="font-size:18px"></i>&nbsp;Back
+      </button>
+
+      <h2 class="config-h2" style="font-size:30px;margin:16px 0 4px">Configure your test</h2>
+      <p style="color:var(--color-neutral-700);margin:0 0 26px;font-size:15px">Choose a mode, difficulty, and — for topic practice — a domain.</p>
+
+      <div style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--color-neutral-600);margin-bottom:10px">Mode</div>
+      <div style="display:grid;gap:10px;margin-bottom:28px">
+        <sc-for list="{{ modes }}" as="m" hint-placeholder-count="2">
+          <button type="button" style="{{ m.style }}" onClick="{{ m.onClick }}">
+            <i class="{{ m.icon }}" style="font-size:26px;color:var(--color-accent-2-700)"></i>
+            <span style="flex:1;text-align:start">
+              <span style="display:block;font-size:17px;font-weight:600">{{ m.title }}</span>
+              <span style="display:block;font-size:13px;color:var(--color-neutral-700);margin-top:2px">{{ m.desc }}</span>
+            </span>
+            <i class="{{ m.check }}" style="font-size:20px;color:var(--color-accent-2-700)"></i>
+          </button>
+        </sc-for>
+      </div>
+
+      <div style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--color-neutral-600);margin-bottom:10px">Difficulty</div>
+      <div style="display:flex;gap:8px;margin-bottom:28px">
+        <sc-for list="{{ levels }}" as="l" hint-placeholder-count="3">
+          <button type="button" style="{{ l.style }}" onClick="{{ l.onClick }}">
+            <span style="display:block;font-size:15px;font-weight:600">{{ l.label }}</span>
+          </button>
+        </sc-for>
+      </div>
+
+      <sc-if value="{{ showDomains }}" hint-placeholder-val="{{ true }}">
+      <div style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--color-neutral-600);margin-bottom:10px">Domain</div>
+      <div style="display:grid;gap:8px;margin-bottom:28px">
+        <sc-for list="{{ domains }}" as="d" hint-placeholder-count="5">
+          <button type="button" style="{{ d.style }}" onClick="{{ d.onClick }}">
+            <i class="{{ d.icon }}" style="font-size:22px;color:var(--color-accent-2-700)"></i>
+            <span style="flex:1;text-align:start;font-size:16px">{{ d.label }}</span>
+          </button>
+        </sc-for>
+      </div>
+      </sc-if>
+
+      <sc-if value="{{ emptyPool }}" hint-placeholder-val="{{ false }}">
+        <div dir="auto" style="background:var(--color-accent-2-100);border:1px solid var(--color-accent-2-300);color:var(--color-accent-2-800);padding:12px 14px;border-radius:var(--radius-lg);font-size:14px;margin-bottom:16px">
+          No questions match that combination. Try another difficulty or domain.
+        </div>
+      </sc-if>
+
+      <div style="display:flex;gap:10px;align-items:flex-start;background:var(--color-surface);border:1px solid var(--color-divider);border-radius:var(--radius-lg);padding:12px 14px;margin-bottom:14px;font-size:14px;line-height:1.5;color:var(--color-neutral-800)">
+        <i class="{{ modeNoteIcon }}" style="font-size:20px;color:var(--color-accent-2-700);flex:none;margin-top:1px"></i>
+        <span>{{ modeNote }}</span>
+      </div>
+      <button class="btn btn-primary btn-block" style="font-size:17px;padding:14px;position:sticky;bottom:14px;box-shadow:var(--shadow-lg)" onClick="{{ begin }}">
+        {{ startLabel }}
+      </button>
+    </div>
+    </sc-if>
+
+    <!-- ============ QUIZ ============ -->
+    <sc-if value="{{ isQuiz }}" hint-placeholder-val="{{ false }}">
+    <div style="padding-top:22px">
+      <div style="display:flex;align-items:center;gap:14px;margin-bottom:14px">
+        <button class="btn btn-ghost" style="padding:6px 10px;margin-left:-10px" onClick="{{ quitQuiz }}">
+          <i class="ph-duotone ph-x" style="font-size:16px"></i>&nbsp;Exit
+        </button>
+        <div style="flex:1;font-size:13px;color:var(--color-neutral-700);text-align:end;font-variant-numeric:tabular-nums">
+          Question {{ qNum }} of {{ qTotal }}
+        </div>
+        <sc-if value="{{ showTimer }}" hint-placeholder-val="{{ false }}">
+          <span style="{{ timerStyle }}"><i class="ph-duotone ph-timer" style="font-size:16px"></i>{{ timeText }}</span>
+        </sc-if>
+      </div>
+      <div style="height:4px;background:var(--color-neutral-200);border-radius:2px;overflow:hidden;margin-bottom:24px">
+        <div style="{{ barFill }}"></div>
+      </div>
+
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px">
+        <span class="tag tag-outline" style="text-transform:capitalize">{{ qLevel }}</span>
+        <span class="tag tag-accent-2">{{ qDomain }}</span>
+        <span class="tag tag-neutral">{{ qType }}</span>
+      </div>
+
+      <p class="qtext" dir="auto" style="unicode-bidi:plaintext;font-size:23px;line-height:1.45;margin:0 0 22px;text-wrap:pretty">{{ qText }}</p>
+
+      <div style="display:grid;gap:10px" key="{{ qKey }}">
+        <sc-for list="{{ options }}" as="o" hint-placeholder-count="4">
+          <button type="button" style="{{ o.style }}" style-hover="{{ o.hover }}" onClick="{{ o.onClick }}" disabled="{{ o.disabled }}">
+            <span dir="ltr" style="{{ o.markStyle }}">{{ o.mark }}</span>
+            <span dir="auto" style="unicode-bidi:plaintext;flex:1;font-size:16px;line-height:1.5">{{ o.text }}</span>
+          </button>
+        </sc-for>
+      </div>
+      <div class="kbd-hint" style="font-size:12px;color:var(--color-neutral-600);margin-top:12px;letter-spacing:.03em">Tip: press <strong>1–4</strong> to answer, <strong>Enter</strong> for next.</div>
+
+      <sc-if value="{{ answered }}" hint-placeholder-val="{{ false }}">
+      <div class="fade" style="{{ feedbackStyle }}">
+        <div style="display:flex;align-items:center;gap:8px;font-size:14px;font-weight:600;margin-bottom:8px;color:{{ verdictColor }}">
+          <i class="{{ verdictIcon }}" style="font-size:20px"></i>{{ verdictText }}
+        </div>
+        <div dir="auto" style="unicode-bidi:plaintext;font-size:15px;line-height:1.6;color:var(--color-neutral-900)">
+          <strong>Answer:</strong> {{ correctText }}<br>{{ explanation }}
+        </div>
+      </div>
+      <button class="btn btn-primary btn-block" style="margin-top:16px;font-size:16px;padding:13px" onClick="{{ next }}">
+        {{ nextLabel }}
+      </button>
+      </sc-if>
+    </div>
+    </sc-if>
+
+    <!-- ============ RESULTS ============ -->
+    <sc-if value="{{ isResults }}" hint-placeholder-val="{{ false }}">
+    <div class="fade" style="padding-top:34px">
+      <img class="brand-logo" src="assets/arabex-intl.png" alt="Arabex International" style="height:30px;width:auto;display:block;margin-bottom:14px">
+      <div style="border-top:3px solid var(--color-text);padding-top:14px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--color-neutral-700)">Assessment Complete</div>
+
+      <div style="display:flex;align-items:flex-end;gap:16px;margin:18px 0 6px">
+        <span class="score-big" style="font-size:76px;line-height:.9;font-weight:600;font-variant-numeric:tabular-nums">{{ score }}</span>
+        <span style="font-size:26px;color:var(--color-neutral-600);padding-bottom:10px">/ {{ total }}</span>
+        <span style="flex:1"></span>
+        <span style="font-size:20px;padding-bottom:12px;color:{{ verdictColor }};font-weight:600">{{ pct }}%</span>
+      </div>
+      <p style="font-size:17px;color:var(--color-neutral-800);margin:0 0 26px">{{ gradeText }}</p>
+
+      <div style="background:var(--color-surface);border:1px solid var(--color-divider);border-radius:var(--radius-lg);padding:18px 16px;margin-bottom:30px">
+        <div style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--color-neutral-600);margin-bottom:12px">Your result card</div>
+        <sc-if value="{{ cardReady }}" hint-placeholder-val="{{ false }}">
+          <img src="{{ cardUrl }}" alt="{{ cardAlt }}" style="display:block;width:100%;max-width:320px;margin:0 auto 14px;border-radius:var(--radius-md);box-shadow:var(--shadow-lg)">
+        </sc-if>
+        <sc-if value="{{ cardLoading }}" hint-placeholder-val="{{ true }}">
+          <div style="aspect-ratio:4/5;max-width:320px;margin:0 auto 14px;border-radius:var(--radius-md);background:var(--color-neutral-200);display:flex;align-items:center;justify-content:center;color:var(--color-neutral-700);font-size:14px">Preparing your card…</div>
+        </sc-if>
+        <label for="card-name" style="display:block;font-size:13px;color:var(--color-neutral-700);margin-bottom:6px">Name on the card (optional)</label>
+        <input id="card-name" class="input" type="text" maxlength="40" value="{{ cardName }}" onInput="{{ onCardName }}" placeholder="Your name" dir="auto" style="width:100%;margin-bottom:12px;font-size:16px">
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <button class="btn btn-primary" style="flex:1;min-width:140px;padding:12px" onClick="{{ shareCard }}">
+            <i class="ph-duotone ph-share-network" style="font-size:18px"></i>&nbsp;Share card
+          </button>
+          <button class="btn btn-secondary" style="flex:1;min-width:140px;padding:12px" onClick="{{ downloadCard }}">
+            <i class="ph-duotone ph-download-simple" style="font-size:18px"></i>&nbsp;Save image
+          </button>
+        </div>
+        <a class="btn btn-ghost btn-block" href="{{ shareLink }}" target="_blank" rel="noopener" style="margin-top:8px;text-decoration:none;padding:10px">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.4-4.1A8.6 8.6 0 1 1 8 19.3z"/><path d="M9 8.3c-.4 2.9 3.4 6.8 6.7 6.6l.8-1.6-2.1-1-1 .9c-1.1-.5-2.2-1.6-2.7-2.7l.9-1-1-2.1z"/></svg>&nbsp;Share score on WhatsApp
+        </a>
+        <sc-if value="{{ cardMsg }}" hint-placeholder-val="">
+          <div style="font-size:13px;color:var(--color-neutral-700);text-align:center;margin-top:6px">{{ cardMsg }}</div>
+        </sc-if>
+      </div>
+
+      <div style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--color-neutral-600);margin-bottom:12px">By domain</div>
+      <div style="display:grid;gap:14px;margin-bottom:30px">
+        <sc-for list="{{ breakdown }}" as="b" hint-placeholder-count="3">
+          <div>
+            <div style="display:flex;justify-content:space-between;font-size:14px;margin-bottom:5px">
+              <span>{{ b.label }}</span>
+              <span style="color:var(--color-neutral-700);font-variant-numeric:tabular-nums">{{ b.score }}</span>
+            </div>
+            <div style="height:6px;background:var(--color-neutral-200);border-radius:3px;overflow:hidden">
+              <div style="{{ b.bar }}"></div>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+
+      <div style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--color-neutral-600);margin-bottom:12px">Review mistakes</div>
+      <sc-if value="{{ perfect }}" hint-placeholder-val="{{ false }}">
+        <div style="background:var(--ok-100);border:1px solid var(--ok-300);padding:14px 16px;border-radius:var(--radius-lg);font-size:15px;margin-bottom:26px">
+          <i class="ph-duotone ph-check-circle" style="color:var(--ok-700)"></i>&nbsp; No mistakes — a flawless run.
+        </div>
+      </sc-if>
+      <div style="display:grid;gap:12px;margin-bottom:30px">
+        <sc-for list="{{ mistakes }}" as="m" hint-placeholder-count="0">
+          <div class="card" style="padding:15px 16px">
+            <div style="display:flex;gap:8px;margin-bottom:10px">
+              <span class="tag tag-outline">{{ m.domain }}</span>
+            </div>
+            <p dir="auto" style="unicode-bidi:plaintext;font-size:16px;margin:0 0 10px;line-height:1.45">{{ m.question }}</p>
+            <div dir="auto" style="unicode-bidi:plaintext;font-size:14px;padding:8px 12px;border-radius:var(--radius-md);background:var(--color-accent-2-100);color:var(--color-accent-2-800);margin-bottom:6px">
+              <i class="ph-duotone ph-x-circle"></i>&nbsp; Your answer: {{ m.chosenText }}
+            </div>
+            <div dir="auto" style="unicode-bidi:plaintext;font-size:14px;padding:8px 12px;border-radius:var(--radius-md);background:var(--ok-100);color:var(--ok-800);margin-bottom:10px">
+              <i class="ph-duotone ph-check-circle"></i>&nbsp; Correct: {{ m.correctText }}
+            </div>
+            <div dir="auto" style="unicode-bidi:plaintext;font-size:14px;color:var(--color-neutral-800);line-height:1.55">{{ m.explanation }}</div>
+          </div>
+        </sc-for>
+      </div>
+
+      <div style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--color-neutral-600);margin-bottom:12px">What’s next</div>
+      <div style="display:grid;gap:10px;margin-bottom:26px">
+        <sc-for list="{{ nextSteps }}" as="n" hint-placeholder-count="2">
+          <a href="{{ n.href }}" target="{{ n.target }}" rel="noopener" style="display:flex;align-items:center;gap:13px;padding:14px 15px;border-radius:var(--radius-lg);border:1px solid var(--color-neutral-300);background:var(--color-neutral-100);color:var(--color-text);text-decoration:none" style-hover="border-color:var(--color-accent-2-500)">
+            <i class="{{ n.icon }}" style="font-size:24px;color:var(--color-accent-2-700);flex:none"></i>
+            <span style="flex:1">
+              <span style="display:block;font-size:16px;font-weight:600">{{ n.title }}</span>
+              <span style="display:block;font-size:13px;line-height:1.45;color:var(--color-neutral-700);margin-top:2px">{{ n.desc }}</span>
+            </span>
+            <i class="ph-duotone ph-caret-right" style="font-size:18px;color:var(--color-neutral-600);flex:none"></i>
+          </a>
+        </sc-for>
+      </div>
+
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <button class="btn btn-primary" style="flex:1;min-width:140px;padding:13px" onClick="{{ retakeSame }}">Retake same</button>
+        <button class="btn btn-secondary" style="flex:1;min-width:140px;padding:13px" onClick="{{ retake }}">New test</button>
+        <button class="btn btn-secondary" style="flex:1;min-width:140px;padding:13px" onClick="{{ goLanding }}">Home</button>
+      </div>
+    </div>
+    </sc-if>
+
+    <!-- ============ GLOSSARY ============ -->
+    <sc-if value="{{ isGlossary }}" hint-placeholder-val="{{ false }}">
+    <div class="fade" style="padding-top:26px">
+      <img class="brand-logo" src="assets/arabex-intl.png" alt="Arabex International" style="height:30px;width:auto;display:block;margin-bottom:12px">
+      <button class="btn btn-ghost" style="padding:6px 10px;margin-left:-10px" onClick="{{ goLanding }}">
+        <i class="ph-duotone ph-arrow-left" style="font-size:18px"></i>&nbsp;Back
+      </button>
+
+      <h2 class="config-h2" style="font-size:30px;margin:16px 0 4px">Glossary</h2>
+      <p style="color:var(--color-neutral-700);margin:0 0 22px;font-size:15px">Study verified English–Arabic terms by domain. Search in English or Arabic, or filter by domain.</p>
+
+      <input class="input" type="search" placeholder="Search English or Arabic…" value="{{ gq }}" onInput="{{ onSearch }}" dir="auto" style="width:100%;margin-bottom:16px;font-size:16px">
+
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px">
+        <sc-for list="{{ glossaryDomains }}" as="d" hint-placeholder-count="6">
+          <button type="button" style="{{ d.style }}" onClick="{{ d.onClick }}">{{ d.label }}</button>
+        </sc-for>
+      </div>
+
+      <sc-if value="{{ glossaryEmpty }}" hint-placeholder-val="{{ false }}">
+        <p style="color:var(--color-neutral-600);font-size:15px;padding:8px 0">No terms match your search.</p>
+      </sc-if>
+
+      <div style="display:grid;gap:1px;background:var(--color-divider)">
+        <sc-for list="{{ glossary }}" as="g" hint-placeholder-count="10">
+          <div style="display:grid;grid-template-columns:1fr auto 1.1fr;gap:14px;align-items:baseline;background:var(--color-bg);padding:12px 2px">
+            <span style="font-size:16px">{{ g.en }}</span>
+            <span class="tag tag-outline" style="font-size:10px;align-self:center">{{ g.domainLabel }}</span>
+            <span dir="rtl" style="font-size:19px;color:var(--color-neutral-900);text-align:right;font-family:var(--font-heading)">{{ g.ar }}</span>
+          </div>
+        </sc-for>
+      </div>
+
+      <sc-if value="{{ glossaryMore }}" hint-placeholder-val="{{ false }}">
+        <button class="btn btn-secondary btn-block" style="margin-top:18px;padding:12px" onClick="{{ showMore }}">Show more</button>
+      </sc-if>
+
+      <button class="btn btn-primary btn-block" style="font-size:16px;padding:13px;margin-top:26px" onClick="{{ goTest }}">Test yourself on these</button>
+    </div>
+    </sc-if>
+
+
+    <!-- ============ PROGRESS ============ -->
+    <sc-if value="{{ isProgress }}" hint-placeholder-val="{{ false }}">
+    <div class="fade" style="padding-top:26px">
+      <img class="brand-logo" src="assets/arabex-intl.png" alt="Arabex International" style="height:30px;width:auto;display:block;margin-bottom:12px">
+      <button class="btn btn-ghost" style="padding:6px 10px;margin-left:-10px" onClick="{{ goLanding }}">
+        <i class="ph-duotone ph-arrow-left" style="font-size:18px"></i>&nbsp;Back
+      </button>
+      <h2 class="config-h2" style="font-size:30px;margin:16px 0 4px">My progress</h2>
+
+      <sc-if value="{{ pgEmpty }}" hint-placeholder-val="{{ true }}">
+        <p style="color:var(--color-neutral-700);margin:18px 0 0;font-size:15px">No sessions yet. Finish a test and your scores, trend and weakest domain will appear here.</p>
+      </sc-if>
+
+      <sc-if value="{{ pgHas }}" hint-placeholder-val="{{ false }}">
+        <p style="color:var(--color-neutral-700);margin:0 0 22px;font-size:15px">Saved on this device across {{ pgSessions }} session(s).</p>
+
+        <div class="grid-3" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:28px">
+          <div class="card" style="padding:16px">
+            <div style="font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--color-neutral-600);margin-bottom:6px">Average</div>
+            <div style="font-size:32px;font-weight:600;font-variant-numeric:tabular-nums">{{ pgAvg }}%</div>
+          </div>
+          <div class="card" style="padding:16px">
+            <div style="font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--color-neutral-600);margin-bottom:6px">Best</div>
+            <div style="font-size:32px;font-weight:600;font-variant-numeric:tabular-nums">{{ pgBest }}%</div>
+          </div>
+          <div class="card" style="padding:16px">
+            <div style="font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--color-neutral-600);margin-bottom:6px">Trend</div>
+            <div style="font-size:17px;font-weight:600;display:flex;align-items:center;gap:6px;color:{{ pgTrendColor }}"><i class="ph-duotone {{ pgTrendIcon }}" style="font-size:22px"></i>{{ pgTrendLabel }}</div>
+          </div>
+        </div>
+
+        <div class="card" style="padding:16px;margin-bottom:28px;display:flex;align-items:center;gap:13px">
+          <i class="ph-duotone ph-target" style="font-size:26px;color:var(--color-accent-2-700);flex:none"></i>
+          <div>
+            <div style="font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--color-neutral-600);margin-bottom:2px">Focus next on</div>
+            <div style="font-size:17px;font-weight:600">{{ pgWeakest }} <span style="color:var(--color-neutral-600);font-weight:400;font-size:14px">{{ pgWeakestPct }}</span></div>
+          </div>
+        </div>
+
+        <div style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--color-neutral-600);margin-bottom:14px">Accuracy by domain</div>
+        <div style="display:grid;gap:14px;margin-bottom:30px">
+          <sc-for list="{{ pgDomains }}" as="d" hint-placeholder-count="5">
+            <div>
+              <div style="display:flex;justify-content:space-between;font-size:14px;margin-bottom:5px"><span>{{ d.label }}</span><span style="font-variant-numeric:tabular-nums;color:var(--color-neutral-700)">{{ d.pctText }}</span></div>
+              <div style="height:8px;background:var(--color-neutral-200);border-radius:4px;overflow:hidden"><div style="height:100%;width:{{ d.barW }};background:{{ d.barColor }}"></div></div>
+            </div>
+          </sc-for>
+        </div>
+
+        <div style="font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--color-neutral-600);margin-bottom:14px">Recent sessions</div>
+        <div style="display:grid;gap:12px;margin-bottom:30px">
+          <sc-for list="{{ pgRecent }}" as="r" hint-placeholder-count="5">
+            <div style="display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:center">
+              <span style="font-size:12px;color:var(--color-neutral-600);width:52px">{{ r.when }}</span>
+              <div style="height:8px;background:var(--color-neutral-200);border-radius:4px;overflow:hidden"><div style="height:100%;width:{{ r.barW }};background:{{ r.barColor }}"></div></div>
+              <span style="font-size:14px;font-variant-numeric:tabular-nums;width:44px;text-align:right">{{ r.pctText }}</span>
+            </div>
+          </sc-for>
+        </div>
+
+        <button class="btn btn-ghost" style="font-size:13px;padding:8px 12px;color:var(--color-neutral-600)" onClick="{{ clearHistory }}">
+          <i class="ph-duotone ph-trash" style="font-size:16px"></i>&nbsp;Clear history
+        </button>
+      </sc-if>
+    </div>
+    </sc-if>
+
+    <!-- ============ ABOUT DIALOG ============ -->
+    <!-- ============ LEAVE TEST DIALOG ============ -->
+    <sc-if value="{{ exitOpen }}" hint-placeholder-val="{{ false }}">
+    <div class="dialog-backdrop" style="position:fixed;inset:0;background:rgba(32,30,29,.5);display:flex;align-items:center;justify-content:center;padding:20px;z-index:60" onClick="{{ keepGoing }}">
+      <div class="dialog" role="dialog" aria-modal="true" aria-labelledby="exit-title" style="background:var(--color-bg);max-width:400px;width:100%;padding:26px 24px;border-radius:var(--radius-lg);box-shadow:var(--shadow-lg)" onClick="{{ stop }}">
+        <h2 id="exit-title" style="font-size:22px;margin:0 0 8px">Leave this test?</h2>
+        <p style="font-size:15px;line-height:1.55;color:var(--color-neutral-800);margin:0 0 6px">Your answers in this test won’t be saved.</p>
+        <sc-if value="{{ exitTimed }}" hint-placeholder-val="{{ false }}">
+          <p style="font-size:14px;line-height:1.5;color:var(--color-neutral-700);margin:0 0 6px">The clock is paused while you decide.</p>
+        </sc-if>
+        <div style="display:flex;gap:10px;margin-top:18px;flex-wrap:wrap">
+          <button class="btn btn-primary" style="flex:1;min-width:140px;padding:12px" onClick="{{ keepGoing }}">Keep going</button>
+          <button class="btn btn-secondary" style="flex:1;min-width:140px;padding:12px" onClick="{{ confirmExit }}">Leave test</button>
+        </div>
+      </div>
+    </div>
+    </sc-if>
+
+    <sc-if value="{{ aboutOpen }}" hint-placeholder-val="{{ false }}">
+    <div class="dialog-backdrop" style="position:fixed;inset:0;background:rgba(32,30,29,.45);display:flex;align-items:center;justify-content:center;padding:20px;z-index:50" onClick="{{ closeAbout }}">
+      <div class="dialog" style="background:var(--color-bg);max-width:440px;width:100%;max-height:88vh;overflow-y:auto;padding:26px 24px;border-radius:var(--radius-lg);box-shadow:var(--shadow-lg)" onClick="{{ stop }}">
+        
+        <div style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--color-neutral-600);margin-bottom:6px">About Us</div>
+        
+        <p style="font-size:15px;line-height:1.65;margin:0 0 14px;color:var(--color-neutral-900);text-wrap:pretty">Arabex International is an international translation house based in Kerala, India. We translate from Arabic into any language and from any language into Arabic — certificates, legal, academic, Islamic, CV and media content — with precision, care and confidentiality.</p>
+        <p style="font-size:15px;line-height:1.65;margin:0 0 14px;color:var(--color-neutral-900);text-wrap:pretty">Beyond translation, we guide students toward Arab universities and scholarships, prepare professionals for the Gulf job market, and build platforms that carry Arabic language, learning and news to a wider audience.</p>
+        <p style="font-size:15px;line-height:1.65;margin:0 0 16px;color:var(--color-neutral-900);text-wrap:pretty">Whatever the document or destination, Arabex helps you communicate clearly, confidently, and without borders.</p>
+        <p style="font-size:13px;line-height:1.5;margin:0 0 4px;color:var(--color-neutral-700)">For more, visit our site.</p>
+        <div style="display:grid;gap:11px;margin-bottom:18px">
+          <a href="{{ siteLink }}" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:11px;font-size:15px;color:var(--color-accent-2-700);text-decoration:none">
+            <i class="ph-duotone ph-globe" style="font-size:22px"></i>{{ siteLabel }}
+          </a>
+        </div>
+        <div style="font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--color-neutral-600);margin-bottom:10px">Follow us on social media</div>
+        <div style="display:flex;gap:10px;margin-bottom:22px">
+          <a href="https://www.linkedin.com/company/arabex-international/" target="_blank" rel="noopener" aria-label="LinkedIn" style="display:flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:var(--radius-md);border:1px solid var(--color-neutral-300);color:var(--color-accent-2-700);text-decoration:none" style-hover="border-color:var(--color-accent-2-600)">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><line x1="8" y1="11" x2="8" y2="17"/><circle cx="8" cy="7.6" r="0.6" fill="currentColor"/><path d="M12 17v-6M12 13.6a2.6 2.6 0 0 1 5.2 0V17"/></svg>
+          </a>
+          <a href="https://www.instagram.com/arabexinternational/" target="_blank" rel="noopener" aria-label="Instagram" style="display:flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:var(--radius-md);border:1px solid var(--color-neutral-300);color:var(--color-accent-2-700);text-decoration:none" style-hover="border-color:var(--color-accent-2-600)">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="0.7" fill="currentColor"/></svg>
+          </a>
+          <a href="https://www.facebook.com/arabexinternational/" target="_blank" rel="noopener" aria-label="Facebook" style="display:flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:var(--radius-md);border:1px solid var(--color-neutral-300);color:var(--color-accent-2-700);text-decoration:none" style-hover="border-color:var(--color-accent-2-600)">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15.5 3H13a4 4 0 0 0-4 4v3H6.5v3.5H9V21h3.5v-7.5H15l.5-3.5h-3V7.5a1 1 0 0 1 1-1h2z"/></svg>
+          </a>
+          <a href="{{ waLink }}" target="_blank" rel="noopener" aria-label="WhatsApp" style="display:flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:var(--radius-md);border:1px solid var(--color-neutral-300);color:var(--color-accent-2-700);text-decoration:none" style-hover="border-color:var(--color-accent-2-600)">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.4-4.1A8.6 8.6 0 1 1 8 19.3z"/><path d="M9 8.3c-.4 2.9 3.4 6.8 6.7 6.6l.8-1.6-2.1-1-1 .9c-1.1-.5-2.2-1.6-2.7-2.7l.9-1-1-2.1z"/></svg>
+          </a>
+          <a href="mailto:arabexinternational@gmail.com" aria-label="Email" style="display:flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:var(--radius-md);border:1px solid var(--color-neutral-300);color:var(--color-accent-2-700);text-decoration:none" style-hover="border-color:var(--color-accent-2-600)">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6.5l8.5 6.5 8.5-6.5"/></svg>
+          </a>
+        </div>
+        <button class="btn btn-primary btn-block" style="padding:12px" onClick="{{ closeAbout }}">Close</button>
+      </div>
+    </div>
+    </sc-if>
+
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { ready:false, err:null, screen:'landing', mode:'topic', level:'easy', domain:'legal', emptyPool:false, sess:null, timeLeft:null, about:false, tip:false, glossaryDomain:'all', gq:'', glossaryDir:'en', };
+  QSECS = 60;
+  componentWillUnmount(){ this.clearTimer(); if(this._onKey) document.removeEventListener('keydown', this._onKey); if(this._onHash) window.removeEventListener('hashchange', this._onHash); if(this._onUnload) window.removeEventListener('beforeunload', this._onUnload); }
+  _domLabel(k){ const m=(this.MAIN||[]).find(x=>x.key===k); return m?m.label:k; }
+  clearTimer(){ if(this._iv){ clearInterval(this._iv); this._iv=null; } }
+  startTimer(){
+    this.clearTimer();
+    if(this.state.mode!=='mixed'){ this.setState({timeLeft:null}); return; }
+    this.setState({timeLeft:this.QSECS});
+    this._iv=setInterval(()=>this._tick(),1000);
+  }
+  _tick(){
+    const t=(this.state.timeLeft||0)-1;
+    if(t<=0){ this.clearTimer(); this.setState({timeLeft:0}); this._expire(); }
+    else { this.setState({timeLeft:t}); }
+  }
+  _expire(){
+    const s=this.state.sess; if(!s||s.chosen!=null) return;
+    const q=s.pool[s.idx];
+    const answers=s.answers.concat([{q, chosen:-1, correct:false, timedOut:true}]);
+    this.setState({sess:{...s, chosen:-1, timedOut:true, answers}});
+  }
+
+  componentDidMount(){
+    this._load();
+    this._onUnload = (e)=>{ const s=this.state.sess; if(this.state.screen==='quiz' && s && (s.idx>0 || s.chosen!=null)){ e.preventDefault(); e.returnValue=''; } };
+    window.addEventListener('beforeunload', this._onUnload);
+    this._onHashG = ()=>{ if((location.hash||'').toLowerCase()==='#glossary'){ this.clearTimer(); this.setState({screen:'glossary'}); try{ history.replaceState(null,'',location.pathname+location.search); }catch(e){} } };
+    window.addEventListener('hashchange', this._onHashG);
+    this._onKey = (e)=>this._handleKey(e);
+    document.addEventListener('keydown', this._onKey);
+  }
+  _handleKey(e){
+    if(this.state.screen!=='quiz' || this.state.exitAsk) return;
+    const s=this.state.sess; if(!s) return;
+    if(e.target && /^(INPUT|TEXTAREA|SELECT)$/.test(e.target.tagName)) return;
+    const answered = s.chosen!=null;
+    if(!answered){
+      const q=s.pool[s.idx]; let idx=-1;
+      if(e.key>='1' && e.key<='9') idx=+e.key-1;
+      else { const k=(e.key||'').toLowerCase(); if(k>='a'&&k<='j') idx=k.charCodeAt(0)-97; }
+      if(idx>=0 && idx<q.options.length){ e.preventDefault(); this.choose(idx); }
+    } else if(e.key==='Enter' || e.key===' '){
+      e.preventDefault(); this.next();
+    }
+  }
+  _custom(){ return []; }
+  _rebuild(){
+    const base = this._base||[];
+    const custom = this._custom();
+    const merged = base.concat(custom);
+    this.all = merged.filter(q=>this.MAIN_KEYS.includes(q.domain));
+    this.counts = this._counts();
+    this.glossary = this._buildGlossary();
+  }
+  _apply(d){
+    this._base = (d.questions||d);
+    this._rebuild();
+    const un = this.props.unlockedLevels; const sl = this.props.startLevel;
+    const patch = {ready:true};
+    if(sl && (!un || un.includes(sl))) patch.level = sl;
+    this.setState(patch);
+  }
+  _load(){
+    // Prefer inline data (works as a single self-contained file, offline / any host)
+    const el = document.getElementById('question-bank');
+    if(el && el.textContent.trim()){
+      try { this._apply(JSON.parse(el.textContent)); return; } catch(e){ /* fall through to fetch */ }
+    }
+    fetch('questions.json').then(r=>r.json()).then(d=>this._apply(d))
+      .catch(e=>this.setState({err:'Could not load the question bank. '+String(e)}));
+  }
+
+  MAIN = [
+    {key:'legal',    label:'Legal / Court',        icon:'ph-duotone ph-scales'},
+    {key:'civil',    label:'Civil & Official Docs', icon:'ph-duotone ph-identification-card'},
+    {key:'medical',  label:'Medical',              icon:'ph-duotone ph-first-aid'},
+    {key:'education',label:'Education / Academic',  icon:'ph-duotone ph-graduation-cap'},
+    {key:'business', label:'Business / Commercial', icon:'ph-duotone ph-briefcase'},
+  ];
+  MAIN_KEYS = ['legal','civil','medical','education','business'];
+  LEVELS = ['easy','intermediate','hard'];
+
+  _counts(){
+    const c = {byLevel:{}, byLevelDomain:{}};
+    this.LEVELS.forEach(l=>{ c.byLevel[l]=0; c.byLevelDomain[l]={}; this.MAIN_KEYS.forEach(d=>c.byLevelDomain[l][d]=0); });
+    this.all.forEach(q=>{ if(c.byLevel[q.level]!=null){ c.byLevel[q.level]++; if(c.byLevelDomain[q.level][q.domain]!=null) c.byLevelDomain[q.level][q.domain]++; } });
+    return c;
+  }
+
+  _buildGlossary(){
+    const seen=new Set(), out=[];
+    this.all.forEach(q=>{
+      if(q.type!=='term_en_ar') return;
+      const m=q.question.match(/[\u201c\u201d"\u00ab\u00bb]([^\u201c\u201d"\u00ab\u00bb]+)[\u201c\u201d"\u00ab\u00bb]/);
+      if(!m) return;
+      const en=m[1].trim(), ar=q.answer;
+      const key=en.toLowerCase()+'|'+ar;
+      if(seen.has(key)) return; seen.add(key);
+      out.push({en, ar, domain:q.domain, domainLabel:q.domain_label});
+    });
+    out.sort((a,b)=>a.en.localeCompare(b.en));
+    return out;
+  }
+  shuffle(a){ a=a.slice(); for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];} return a; }
+  cap(s){ return s.charAt(0).toUpperCase()+s.slice(1); }
+  typeLabel(t){ return ({term_en_ar:'EN → AR',term_ar_en:'AR → EN',matching_pair:'Matching',near_synonym:'Near synonym',best_translation:'Best translation',error_spotting:'Error spotting',false_friend:'False friend',register:'Register',quality:'Quality'})[t]||t; }
+
+  _totalLabel(){ const n=(this.all||[]).length; return n>=100 ? (Math.floor(n/100)*100).toLocaleString('en-US')+'+' : '3,600+'; }
+  quickStart(){
+    if(!this.all) return;
+    const pool=this.shuffle(this.all.filter(q=>q.level==='easy')).slice(0,10);
+    if(!pool.length) return;
+    this.setState({mode:'quick', level:'easy', emptyPool:false, cardUrl:null, screen:'quiz', sess:{pool, idx:0, chosen:null, timedOut:false, answers:[]}}, ()=>this.startTimer());
+  }
+  begin(){
+    if(!this.all){ return; }
+    let pool = this.all.filter(q=>q.level===this.state.level);
+    if(this.state.mode==='topic') pool = pool.filter(q=>q.domain===this.state.domain);
+    if(!pool.length){ this.setState({emptyPool:true}); return; }
+    pool = this.shuffle(pool).slice(0, Math.min(20, pool.length));
+    this.setState({emptyPool:false, cardUrl:null, screen:'quiz', sess:{pool, idx:0, chosen:null, timedOut:false, answers:[]}}, ()=>this.startTimer());
+  }
+
+  choose(i){
+    const s=this.state.sess; if(!s||s.chosen!=null) return;
+    this.clearTimer();
+    const q=s.pool[s.idx];
+    const answers=s.answers.concat([{q, chosen:i, correct:i===q.answer_index}]);
+    this.setState({sess:{...s, chosen:i, answers}});
+  }
+  next(){
+    const s=this.state.sess;
+    if(s.idx+1>=s.pool.length){
+      this.clearTimer();
+      const score=s.answers.filter(a=>a.correct).length, total=s.answers.length;
+      const bd={}; s.answers.forEach(a=>{ const k=a.q.domain_label; (bd[k]=bd[k]||{c:0,t:0}); bd[k].t++; if(a.correct)bd[k].c++; });
+      const pct = total?Math.round(score/total*100):0;
+      if(typeof this.props.onFinish==='function') this.props.onFinish({score, total, pct, mode:this.state.mode, level:this.state.level, byDomain:bd});
+      this._recordSession({score, total, pct, mode:this.state.mode, level:this.state.level, byDomain:bd, at:Date.now()});
+      this.setState({screen:'results', cardUrl:null, cardMsg:''}, ()=>this._renderCard()); return;
+    }
+    this.setState({sess:{...s, idx:s.idx+1, chosen:null, timedOut:false}}, ()=>this.startTimer());
+  }
+  leave(patch){ this.clearTimer(); this.setState(patch); }
+  // ---- result card ----
+  _cardName(){ if(this.state.cardName!=null) return this.state.cardName; try{ return localStorage.getItem('atx_name')||''; }catch(e){ return ''; } }
+  _resultInfo(){
+    const s=this.state.sess; if(!s) return null;
+    const ans=s.answers, score=ans.filter(a=>a.correct).length, total=ans.length, pct=total?Math.round(score/total*100):0;
+    const grp={}; ans.forEach(a=>{ const k=a.q.domain_label; (grp[k]=grp[k]||{c:0,t:0}); grp[k].t++; if(a.correct)grp[k].c++; });
+    const mode=this.state.mode;
+    const modeLabel = mode==='topic' ? (s.pool[0]?.domain_label||'Topic')+' practice' : (mode==='quick' ? 'Quick start' : 'Mixed exam');
+    const grade = pct>=85 ? 'Excellent' : pct>=70 ? 'Strong' : pct>=50 ? 'Developing' : 'Keep practising';
+    return {score, total, pct, grp, modeLabel, level:this.cap(this.state.level), grade};
+  }
+  _loadImg(src){ return new Promise(res=>{ if(!src){ res(null); return; } const im=new Image(); im.onload=()=>res(im); im.onerror=()=>res(null); im.src=src; }); }
+  async _renderCard(){
+    const r=this._resultInfo(); if(!r) return;
+    const token=(this._cardToken=(this._cardToken||0)+1);
+    const W=1080, H=1350, c=document.createElement('canvas'); c.width=W; c.height=H;
+    const x=c.getContext('2d');
+    const font=(getComputedStyle(document.body).fontFamily)||'sans-serif';
+    const crimson='#C8102E', ink='#23252e', grey='#5d6170', ok='#1f9d57';
+    x.fillStyle='#f7f8fb'; x.fillRect(0,0,W,H);
+    x.fillStyle=crimson; x.fillRect(0,0,W,18);
+    const logoEl=document.querySelector('img.brand-logo, img[alt="Arabex International"]');
+    const logo=await this._loadImg(logoEl?logoEl.currentSrc||logoEl.src:null);
+    if(token!==this._cardToken) return;
+    let y=110;
+    if(logo){ const h=96, w=logo.width*(h/logo.height); x.drawImage(logo,90,y-20,w,h); }
+    else { x.fillStyle=ink; x.font='700 44px '+font; x.fillText('ARABEX INTERNATIONAL',90,y+40); }
+    y=290;
+    x.fillStyle=grey; x.font='500 30px '+font; try{ x.letterSpacing='6px'; }catch(e){}
+    x.fillText('TRANSLATOR ASSESSMENT', 90, y);
+    try{ x.letterSpacing='0px'; }catch(e){}
+    const name=(this._cardName()||'').trim();
+    x.fillStyle=ink; x.font='600 54px '+font;
+    x.fillText(name ? name : 'My result', 90, y+82);
+    // big score
+    x.fillStyle = r.pct>=70 ? ok : crimson;
+    x.font='700 240px '+font; x.fillText(r.pct+'%', 78, y+340);
+    x.fillStyle=ink; x.font='500 44px '+font;
+    x.fillText(r.score+' / '+r.total+' correct · '+r.grade, 90, y+415);
+    // pill
+    const pill=r.level+' · '+r.modeLabel; x.font='500 32px '+font;
+    const pw=x.measureText(pill).width+56;
+    x.fillStyle='#fbe9ec'; x.beginPath(); (x.roundRect?x.roundRect(90,y+450,pw,64,32):x.rect(90,y+450,pw,64)); x.fill();
+    x.fillStyle='#920c22'; x.fillText(pill, 118, y+493);
+    // domain bars
+    let by=y+590; const keys=Object.keys(r.grp).slice(0,5);
+    x.font='400 30px '+font;
+    keys.forEach(k=>{ const g=r.grp[k], p=g.t?g.c/g.t:0;
+      x.fillStyle=ink; x.fillText(k, 90, by); const sc=g.c+' / '+g.t; x.fillStyle=grey; x.fillText(sc, W-90-x.measureText(sc).width, by);
+      x.fillStyle='#e1e3ea'; x.fillRect(90,by+16,W-180,12); x.fillStyle=crimson; x.fillRect(90,by+16,(W-180)*p,12);
+      by+=64; });
+    // footer
+    x.fillStyle='#d7dae3'; x.fillRect(90,H-150,W-180,2);
+    x.fillStyle=ink; x.font='600 34px '+font; x.fillText('Test yourself: arabexinternational.com/tat', 90, H-90);
+    x.fillStyle=grey; x.font='400 28px '+font;
+    const d=new Date().toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'}); x.fillText(d, W-90-x.measureText(d).width, H-90);
+    let url=null; try{ url=c.toDataURL('image/png'); }catch(e){ url=null; }
+    if(token!==this._cardToken) return;
+    this._cardCanvas=c;
+    this.setState({cardUrl:url, cardMsg: url?'':'Could not create the image in this browser.'});
+  }
+  _cardFile(){ return new Promise(res=>{ if(!this._cardCanvas){ res(null); return; } try{ this._cardCanvas.toBlob(b=>res(b?new File([b],'arabex-result.png',{type:'image/png'}):null),'image/png'); }catch(e){ res(null); } }); }
+  downloadCard(){
+    const url=this.state.cardUrl; if(!url) return;
+    const a=document.createElement('a'); a.href=url; a.download='arabex-result.png'; document.body.appendChild(a); a.click(); a.remove();
+    this.setState({cardMsg:'Image saved.'});
+  }
+  async shareCard(){
+    const r=this._resultInfo(); const file=await this._cardFile();
+    const text='I scored '+(r?r.pct:0)+'% on the Arabex Translator Assessment. Try it: https://arabexinternational.com/tat/';
+    try{
+      if(file && navigator.canShare && navigator.canShare({files:[file]})){ await navigator.share({files:[file], text}); return; }
+    }catch(e){ if(e && e.name==='AbortError') return; }
+    this.downloadCard();
+    this.setState({cardMsg:'Sharing isn’t available here, so the image was saved instead.'});
+  }
+  setCardName(v){
+    try{ localStorage.setItem('atx_name', v); }catch(e){}
+    this.setState({cardName:v});
+    clearTimeout(this._nameT); this._nameT=setTimeout(()=>this._renderCard(), 350);
+  }
+
+  askExit(){
+    const s=this.state.sess;
+    const started = s && (s.idx>0 || s.chosen!=null);
+    if(!started){ this.leave({screen:this.state.mode==='quick'?'landing':'select', sess:null, mode:this.state.mode==='quick'?'topic':this.state.mode}); return; }
+    if(this._iv){ clearInterval(this._iv); this._iv=null; this._paused=true; }
+    this.setState({exitAsk:true});
+  }
+  keepGoing(){
+    this.setState({exitAsk:false});
+    if(this._paused){ this._paused=false; this._iv=setInterval(()=>this._tick(),1000); }
+  }
+
+  // ---- progress ----
+  _history(){ try{ return JSON.parse(localStorage.getItem('atx_history')||'[]'); }catch(e){ return []; } }
+  _recordSession(rec){ try{ const h=this._history(); h.push(rec); localStorage.setItem('atx_history', JSON.stringify(h.slice(-200))); }catch(e){} }
+  _clearHistory(){ try{ localStorage.removeItem('atx_history'); }catch(e){} this.setState({}); }
+  _progress(){
+    const h=this._history();
+    const totalSessions=h.length;
+    const avg = totalSessions? Math.round(h.reduce((s,r)=>s+r.pct,0)/totalSessions) : 0;
+    const best = totalSessions? Math.max(...h.map(r=>r.pct)) : 0;
+    const recent = h.slice(-8).map(r=>({pct:r.pct, level:r.level, mode:r.mode, at:r.at}));
+    // per-domain aggregate across all sessions
+    const dom={};
+    h.forEach(r=>{ Object.keys(r.byDomain||{}).forEach(k=>{ const d=r.byDomain[k]; (dom[k]=dom[k]||{c:0,t:0}); dom[k].c+=d.c; dom[k].t+=d.t; }); });
+    const domains=Object.keys(dom).map(k=>({label:k, c:dom[k].c, t:dom[k].t, pct:dom[k].t?Math.round(dom[k].c/dom[k].t*100):0})).sort((a,b)=>a.pct-b.pct);
+    const weakest = domains.length? domains[0] : null;
+    // trend: avg of last 3 vs previous 3
+    let trend='flat';
+    if(h.length>=4){ const last=h.slice(-3), prev=h.slice(-6,-3); const la=last.reduce((s,r)=>s+r.pct,0)/last.length; const pa=prev.length?prev.reduce((s,r)=>s+r.pct,0)/prev.length:la; trend = la>pa+2?'up':(la<pa-2?'down':'flat'); }
+    return {totalSessions, avg, best, recent, domains, weakest, trend};
+  }
+
+  // ---- style helpers ----
+  optIdle(){ return 'display:flex;gap:13px;align-items:flex-start;width:100%;text-align:start;background:var(--color-neutral-100);border:1px solid var(--color-neutral-300);color:var(--color-text);padding:14px 15px;border-radius:var(--radius-lg);cursor:pointer;transition:border-color .12s,background .12s'; }
+  markBase(){ return 'flex-shrink:0;width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600;font-variant-numeric:tabular-nums'; }
+  cardSel(sel){ return 'display:flex;align-items:center;gap:13px;width:100%;padding:14px 15px;border-radius:var(--radius-lg);cursor:pointer;text-align:start;transition:border-color .12s,background .12s;color:var(--color-text);'+(sel?'border:1.5px solid var(--color-accent-2-600);background:var(--color-accent-2-100)':'border:1px solid var(--color-neutral-300);background:var(--color-neutral-100)'); }
+  segSel(sel){ return 'flex:1;padding:11px 6px;border-radius:var(--radius-lg);cursor:pointer;text-align:center;transition:border-color .12s,background .12s;color:var(--color-text);'+(sel?'border:1.5px solid var(--color-accent-2-600);background:var(--color-accent-2-100)':'border:1px solid var(--color-neutral-300);background:var(--color-neutral-100)'); }
+
+  renderVals(){
+    const S=this.state;
+    const v = {
+      isLanding:S.screen==='landing', isSelect:S.screen==='select', isQuiz:S.screen==='quiz', isResults:S.screen==='results', isGlossary:S.screen==='glossary',
+      goGlossary:()=>this.setState({screen:'glossary'}),
+      goTest:()=>{ const gd=S.glossaryDomain; if(gd && gd!=='all') this.setState({screen:'select', mode:'topic', domain:gd, emptyPool:false}); else this.setState({screen:'select', emptyPool:false}); },
+      onSearch:(e)=>this.setState({gq:e.target.value, glossaryShown:150}),
+      gq:S.gq,
+      emptyPool:S.emptyPool, showDomains:S.mode==='topic',
+      goSelect:()=>this.setState({screen:'select', emptyPool:false, mode:S.mode==='quick'?'topic':S.mode}),
+      goLanding:()=>this.leave({screen:'landing', sess:null, emptyPool:false}),
+      quitQuiz:()=>this.askExit(),
+      exitOpen:!!S.exitAsk,
+      exitTimed:S.mode==='mixed',
+      keepGoing:()=>this.keepGoing(),
+      confirmExit:()=>{ this.setState({exitAsk:false}); this.leave({screen:S.mode==='quick'?'landing':'select', sess:null, mode:S.mode==='quick'?'topic':S.mode}); },
+      retake:()=>this.leave({screen:'select', sess:null, mode:S.mode==='quick'?'topic':S.mode}),
+      retakeSame:()=>{ this.clearTimer(); if(S.mode==='quick') this.quickStart(); else this.begin(); },
+      begin:()=>this.begin(),
+      startLabel: S.mode==='mixed' ? 'Start mixed exam' : 'Start topic practice',
+      modeNote: S.mode==='mixed' ? '20 questions · one minute each · about 20 minutes. The clock runs for each question, so find a quiet moment before you start.' : 'Up to 20 questions · untimed · take as long as you need.',
+      modeNoteIcon: S.mode==='mixed' ? 'ph-duotone ph-timer' : 'ph-duotone ph-coffee',
+      aboutOpen:S.about,
+      openAbout:()=>this.setState({about:true}),
+      closeAbout:()=>this.setState({about:false}),
+      isProgress:S.screen==='progress',
+      goProgress:()=>this.setState({screen:'progress'}),
+      clearHistory:()=>this._clearHistory(),
+      stop:(e)=>e.stopPropagation(),
+      siteLink:'https://www.arabexinternational.com',
+      siteLabel:'www.arabexinternational.com',
+      waLink:'https://wa.me/917994514263',
+      waLabel:'+91 79945 14263',
+      waErrorLink:'mailto:arabexinternational@gmail.com?subject='+encodeURIComponent('Translation Test — error report')+'&body='+encodeURIComponent('Hi Arabex,\n\nI found an error in the Translation Test:\n\n(Please describe the question or term and what looks wrong.)'),
+      features:[
+        {num:'01', text:'Verified Modern Standard Arabic in a professional register.'},
+        {num:'02', text:'Questions in both directions — English → Arabic and Arabic → English.'},
+        {num:'03', text:'Instant feedback with a short explanation on every question.'},
+        {num:'04', text:'A full review of your mistakes, and a result card to share.'},
+      ],
+      totalLabel: this._totalLabel(),
+      stats:[
+        {value:this._totalLabel(), label:'Questions'},
+        {value:'5', label:'Domains'},
+        {value:'3', label:'Levels'},
+      ],
+      quickStart:()=>this.quickStart(),
+      ways:[
+        {title:'Practice by topic', desc:'One domain at a time, at the difficulty you choose. Untimed.', icon:'ph-duotone ph-books', onClick:()=>this.setState({screen:'select', mode:'topic', emptyPool:false})},
+        {title:'Mixed exam', desc:'20 questions across all domains, one minute each.', icon:'ph-duotone ph-exam', onClick:()=>this.setState({screen:'select', mode:'mixed', emptyPool:false})},
+        {title:'Study the glossary', desc:'Browse and search verified English–Arabic terms.', icon:'ph-duotone ph-book-open-text', onClick:()=>this.setState({screen:'glossary'})},
+      ].map(w=>({...w, style:this.cardSel(false), hover:'border-color:var(--color-accent-2-500)'})),
+    };
+
+    const cnt = this.counts || {byLevel:{},byLevelDomain:{}};
+    v.modes = [
+      {key:'topic', title:'Practice by topic', desc:'Focus on one domain at a time.', icon:'ph-duotone ph-books'},
+      {key:'mixed', title:'Mixed exam',        desc:'Random questions across all domains.', icon:'ph-duotone ph-shuffle'},
+    ].map(m=>({...m, style:this.cardSel(S.mode===m.key), check:S.mode===m.key?'ph-duotone ph-check-circle':'ph', onClick:()=>this.setState({mode:m.key, emptyPool:false})}));
+
+    const unlocked = Array.isArray(this.props.unlockedLevels) ? this.props.unlockedLevels : this.LEVELS;
+    v.levels = this.LEVELS.map(l=>{ const lock = !unlocked.includes(l); return {key:l, label:this.cap(l)+(lock?'  🔒':''), style:this.segSel(S.level===l)+(lock?';opacity:.45;cursor:not-allowed':''), onClick: lock ? (()=>{ if(typeof this.props.onLocked==='function') this.props.onLocked(l); }) : (()=>this.setState({level:l, emptyPool:false}))}; });
+
+    v.domains = this.MAIN.map(d=>({...d, style:this.cardSel(S.domain===d.key), onClick:()=>this.setState({domain:d.key, emptyPool:false})}));
+
+    // ---- glossary ----
+    const gd=S.glossaryDomain, gqRaw=(S.gq||'').trim(), gq=gqRaw.toLowerCase();
+    v.glossaryDomains = [{key:'all',label:'All'}].concat(this.MAIN.map(d=>({key:d.key,label:d.label})))
+      .map(d=>({key:d.key, label:d.label, style:this.segSel(gd===d.key)+';flex:none;padding:8px 13px;font-size:14px', onClick:()=>this.setState({glossaryDomain:d.key, glossaryShown:150})}));
+    let glist = this.glossary || [];
+    if(gd!=='all') glist = glist.filter(x=>x.domain===gd);
+    if(gq) glist = glist.filter(x=>x.en.toLowerCase().includes(gq) || x.ar.includes(gqRaw));
+    const shown = S.glossaryShown || 150;
+    v.glossary = glist.slice(0, shown);
+    v.glossaryMore = glist.length > shown;
+    v.showMore = ()=>this.setState({glossaryShown: shown + 150});
+    v.glossaryEmpty = (this.glossary||[]).length>0 && glist.length===0;
+
+    // ---- quiz ----
+    const s=S.sess;
+    if(v.isQuiz && s){
+      const q=s.pool[s.idx];
+      const answered=s.chosen!=null;
+      v.qNum=s.idx+1; v.qTotal=s.pool.length; v.qKey=q.id;
+      v.qLevel=q.level; v.qDomain=q.domain_label; v.qType=this.typeLabel(q.type);
+      v.qText=q.question; v.answered=answered;
+      v.correctText=q.answer; v.explanation=q.explanation;
+      v.next=()=>this.next(); v.nextLabel = s.idx+1>=s.pool.length ? 'See results' : 'Next question';
+      const pct = (s.idx + (answered?1:0)) / s.pool.length * 100;
+      v.barFill = 'height:100%;background:var(--color-accent-2-600);width:'+pct+'%;transition:width .25s';
+      const wasCorrect = s.chosen===q.answer_index;
+      // timer (mixed exam only)
+      v.showTimer = S.mode==='mixed';
+      const tl = S.timeLeft==null ? this.QSECS : S.timeLeft;
+      v.timeText = Math.floor(tl/60)+':'+String(tl%60).padStart(2,'0');
+      const urgent = !answered && tl<=10;
+      v.timerStyle = 'display:flex;align-items:center;gap:6px;font-size:14px;font-weight:600;font-variant-numeric:tabular-nums;padding:5px 11px;border-radius:999px;border:1px solid '+(urgent?'var(--color-accent-2-300);background:var(--color-accent-2-100);color:var(--color-accent-2-700)':'var(--color-neutral-700);background:var(--color-neutral-200);color:var(--color-neutral-800)');
+      v.verdictText = wasCorrect ? 'Correct' : (s.timedOut ? 'Time\u2019s up' : 'Not quite');
+      v.verdictColor = wasCorrect ? 'var(--ok-700)' : 'var(--color-accent-2-700)'; // both light steps now
+      v.verdictIcon = wasCorrect ? 'ph-duotone ph-check-circle' : 'ph-duotone ph-x-circle';
+      v.feedbackStyle = 'margin-top:18px;padding:15px 16px;border-radius:var(--radius-lg);border:1px solid '+(wasCorrect?'var(--ok-300);background:var(--ok-100)':'var(--color-accent-2-300);background:var(--color-accent-2-100)');
+      v.options = q.options.map((t,i)=>{
+        const isCorrect=i===q.answer_index, isChosen=i===s.chosen;
+        let style=this.optIdle(), mark=String.fromCharCode(65+i), markStyle=this.markBase()+';background:var(--color-neutral-200);color:var(--color-neutral-800)', hover='border-color:var(--color-accent-2-500)';
+        if(answered){
+          hover=style;
+          if(isCorrect){ style=this.optIdle().replace('border:1px solid var(--color-neutral-300)','border:1.5px solid var(--ok-600)').replace('background:var(--color-neutral-100)','background:var(--ok-100)')+';cursor:default'; mark='\u2713'; markStyle=this.markBase()+';background:var(--ok-600);color:#fff'; }
+          else if(isChosen){ style=this.optIdle().replace('border:1px solid var(--color-neutral-300)','border:1.5px solid var(--color-accent-2-600)').replace('background:var(--color-neutral-100)','background:var(--color-accent-2-100)')+';cursor:default'; mark='\u2717'; markStyle=this.markBase()+';background:var(--color-accent-2-600);color:#fff'; }
+          else { style=this.optIdle()+';opacity:.5;cursor:default'; }
+        }
+        return {text:t, style, mark, markStyle, hover, disabled:answered, onClick:()=>this.choose(i)};
+      });
+    }
+
+    // ---- progress ----
+    if(v.isProgress){
+      const p=this._progress();
+      v.pgHas = p.totalSessions>0;
+      v.pgEmpty = p.totalSessions===0;
+      v.pgSessions = p.totalSessions;
+      v.pgAvg = p.avg; v.pgBest = p.best;
+      v.pgTrendLabel = p.trend==='up'?'Improving':(p.trend==='down'?'Slipping':'Steady');
+      v.pgTrendIcon = p.trend==='up'?'ph-trend-up':(p.trend==='down'?'ph-trend-down':'ph-minus');
+      v.pgTrendColor = p.trend==='up'?'var(--ok-700)':(p.trend==='down'?'var(--color-accent-2-700)':'var(--color-neutral-700)');
+      v.pgWeakest = p.weakest? p.weakest.label : '—';
+      v.pgWeakestPct = p.weakest? p.weakest.pct+'%' : '';
+      v.pgDomains = p.domains.map(d=>({...d, pctText:d.pct+'%', barW:d.pct+'%',
+        barColor: d.pct>=70?'var(--ok-600)':(d.pct>=50?'var(--color-neutral-500)':'var(--color-accent-2-600)')}));
+      v.pgRecent = p.recent.slice().reverse().map(r=>({pctText:r.pct+'%', meta:this.cap(r.level)+' · '+(r.mode==='topic'?'Topic':(r.mode==='quick'?'Quick start':'Mixed')),
+        when:new Date(r.at).toLocaleDateString(undefined,{month:'short',day:'numeric'}),
+        barW:r.pct+'%', barColor: r.pct>=70?'var(--ok-600)':(r.pct>=50?'var(--color-neutral-500)':'var(--color-accent-2-600)')}));
+    }
+
+    // ---- results ----
+    if(v.isResults && s){
+      const ans=s.answers;
+      const score=ans.filter(a=>a.correct).length, total=ans.length;
+      v.score=score; v.total=total; v.pct=total?Math.round(score/total*100):0;
+      v.verdictColor = v.pct>=70 ? 'var(--ok-700)' : v.pct>=50 ? 'var(--color-neutral-800)' : 'var(--color-accent-2-700)';
+      v.gradeText = v.pct>=85 ? 'Excellent — professional-level accuracy.' : v.pct>=70 ? 'Strong — a few terms to firm up.' : v.pct>=50 ? 'Developing — review the misses below.' : 'Keep practising — focus on the flagged domains.';
+      const grp={};
+      ans.forEach(a=>{ const k=a.q.domain_label; (grp[k]=grp[k]||{c:0,t:0}); grp[k].t++; if(a.correct)grp[k].c++; });
+      v.breakdown = Object.keys(grp).map(k=>{ const g=grp[k]; const p=Math.round(g.c/g.t*100); return {label:k, score:g.c+' / '+g.t, bar:'height:100%;width:'+p+'%;background:var(--color-accent-2-600);border-radius:3px'}; });
+      const modeLabel = S.mode==='topic' ? (s.pool[0]?.domain_label||'Topic')+' practice' : (S.mode==='quick' ? 'Quick start' : 'Mixed exam');
+      const shareMsg = 'Arabex Translator Assessment\nI scored '+score+'/'+total+' ('+v.pct+'%) on the '+this.cap(S.level)+' '+modeLabel+'.\nTry it: '+'https://www.arabexinternational.com/tat/';
+      v.shareLink = 'https://wa.me/?text='+encodeURIComponent(shareMsg);
+      v.cardUrl=S.cardUrl||''; v.cardReady=!!S.cardUrl; v.cardLoading=!S.cardUrl && !S.cardMsg;
+      v.cardAlt='Result card: '+v.pct+'% on the Arabex Translator Assessment';
+      v.cardName=this._cardName(); v.cardMsg=S.cardMsg||'';
+      v.onCardName=(e)=>this.setCardName(e.target.value);
+      v.shareCard=()=>this.shareCard(); v.downloadCard=()=>this.downloadCard();
+      const applyBody='Hi Arabex,\n\nI just scored '+score+'/'+total+' ('+v.pct+'%) on the '+this.cap(S.level)+' '+modeLabel+' of the Translator Assessment, and I would like to work with Arabex as a translator.\n\nName:\nLanguages:\nExperience:\n';
+      const apply={title:'Translate with Arabex', desc:'Strong score? Send us your details to join our translator team.', icon:'ph-duotone ph-handshake', target:'_self',
+        href:'mailto:arabexinternational@gmail.com?subject='+encodeURIComponent('Translator application — assessment '+v.pct+'%')+'&body='+encodeURIComponent(applyBody)};
+      const site={title:'Explore Arabex International', desc:'Translation, Study in Saudi, CV services and more.', icon:'ph-duotone ph-globe', target:'_blank', href:'https://www.arabexinternational.com'};
+      const study={title:'Study the glossary', desc:'Review the verified terms for the domains you missed.', icon:'ph-duotone ph-book-open-text', target:'_self', href:'#glossary'};
+      v.nextSteps = v.pct>=70 ? [apply, site] : [study, site];
+      const miss=ans.filter(a=>!a.correct);
+      v.perfect=miss.length===0;
+      v.mistakes=miss.map(a=>({domain:a.q.domain_label, question:a.q.question, chosenText:a.chosen>=0?a.q.options[a.chosen]:'No answer — time expired', correctText:a.q.answer, explanation:a.q.explanation}));
+    }
+
+    return v;
+  }
+}
+</script>
+</body>
+</html>

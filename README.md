@@ -33,13 +33,15 @@ register, with no country-specific bias.
 
 ### Ways to use it
 
+- **Quick start:** 10 easy questions across all domains, untimed (about 3 minutes).
 - **Topic practice:** one domain at a chosen difficulty, untimed.
 - **Mixed exam:** 20 random questions across all domains, one minute each.
 - **Glossary:** browse and search the verified English–Arabic terms.
 - **My progress:** past results, kept in the candidate's own browser.
 
 Every answer gets instant feedback with the correct answer and a short
-explanation. Keyboard shortcuts: `1`–`4` or `A`–`D` to answer, `Enter` for the next question.
+explanation. At the end, candidates get a result card image (with their name, if
+they want) to save or share. Keyboard shortcuts: `1`–`4` or `A`–`D` to answer, `Enter` for the next question.
 
 ## Files
 
@@ -47,6 +49,8 @@ explanation. Keyboard shortcuts: `1`–`4` or `A`–`D` to answer, `Enter` for t
 |---|---|
 | `index.html` | The whole app as one self-contained page: design, fonts, icons and logo are built in. |
 | `questions.json` | The question bank (3,692 questions). The page loads it from the same folder. |
+| `og-image.png` | Preview image shown when the link is shared (WhatsApp, LinkedIn, etc.). |
+| `favicon.png`, `apple-touch-icon.png` | Browser tab and home-screen icons. |
 
 There is no build step and no server code. Any static host works (GitHub Pages here).
 
