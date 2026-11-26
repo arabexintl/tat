@@ -37,7 +37,26 @@ register, with no country-specific bias.
 - **Topic practice:** one domain at a chosen difficulty, untimed.
 - **Mixed exam:** 20 random questions across all domains, one minute each.
 - **Glossary:** browse and search the verified English–Arabic terms.
-- **My progress:** past results, kept in the candidate's own browser.
+- **My progress:** a chart of recent scores, accuracy by domain, levels and badges,
+  all kept in the candidate's own browser.
+- **Word of the day:** one glossary term on the home page, changing daily.
+
+### Levels and badges
+
+Easy is open to everyone. **Intermediate** unlocks after scoring 80% or more on
+an Easy test, and **Hard** after 80% or more on an Intermediate test.
+To open every level straight away (for example when testing a job candidate),
+send them this link: https://arabexinternational.com/tat/?all
+
+Seven badges reward milestones: first test, five tests, an 80%+ score, a
+perfect score, all five domains, passing Hard, and 70%+ on the mixed exam.
+
+### English or Arabic
+
+The whole interface is available in English and Arabic (right-to-left), with a
+switch at the top of the home page. The choice is remembered, and visitors whose
+browser is set to Arabic see Arabic first. The questions themselves are bilingual
+and stay the same in both.
 
 Every answer gets instant feedback with the correct answer and a short
 explanation. At the end, candidates get a result card image (with their name, if
